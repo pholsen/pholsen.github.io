@@ -34,7 +34,7 @@
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #acd1e4;
+  --bs-primary: #1abc9c;
   --bs-secondary: #2c3e50;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
@@ -4163,57 +4163,35 @@ body {
   min-height: 100vh;
   background-color: #f4f4f4;
 }
-
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
-}
-
 .card {
+  display: flex;
+  flex-direction: column; /* Dikey düzenleme için */
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 5px;
   overflow: hidden;
-  width: 300px;
 }
 
-.card-img {
+.card-description {
+  padding: 20px; /* İçerik için boşluk ekle */
+}
+
+.card-image {
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.card-image img {
+  max-width: 100%;
   height: auto;
-  display: block;
 }
 
-.card-body {
-  padding: 15px;
-  text-align: center;
-}
-
-.card-title {
-  color: #333;
-  margin: 0 0 10px 0;
-}
-
-.card-subtitle {
-  color: #555;
-  margin: 0 0 15px 0;
-}
-
-.card-text {
-  color: #666;
-  margin: 0 0 15px 0;
-}
-
-.card-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 20px 0;
-  color: #666;
-}
-
-.card-list li {
-  margin-bottom: 5px;
+.card-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
 .btn {
@@ -4223,16 +4201,24 @@ body {
   padding: 10px 15px;
   border-radius: 5px;
   transition: background-color 0.3s;
+  margin-bottom: 10px; /* Düğmeler arasında boşluk */
+  text-align: center;
+  width: 80%; /* Düğmelerin genişliğini ayarla */
 }
 
 .btn:hover {
   background-color: #0056b3;
 }
 
-.card-links {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+/* Gerekirse yanıt verme için medya sorguları ekleyin */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .card-description, .card-image, .card-buttons {
+    width: 100%; /* Tam genişlik kullan */
+  }
 }
 .accordion {
   --bs-accordion-color: #212529;
