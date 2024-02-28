@@ -4148,78 +4148,76 @@ textarea.form-control-lg {
   --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.1);
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #f4f4f4;
-}
 .card {
   display: flex;
-  flex-direction: column; /* Dikey düzenleme için */
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 5px solid #ddd;
   border-radius: 5px;
-  overflow: hidden;
+  overflow: hidden;  
+  width: 900px; /* Kartın genişliği */
+  height: 400px; /* Kartın yüksekliği */
 }
 
-.card-description {
-  padding: 20px; /* İçerik için boşluk ekle */
+.card-left {
+ flex: 45%; /* Sol taraf için %30 genişlik */
+  /* İçeriğin düzgün görünmesi için gerekli olabilecek diğer stiller */
+  padding: 15px;
+  font-size: 13px;
 }
 
+
+.card-right {
+  flex: 55%;
+  /* İçeriğin düzgün görünmesi için gerekli olabilecek diğer stiller */
+} 
 .card-image {
-  width: 100%;
-  display: flex;
+  width: 120%; /* Ensure the image container fills the right side */
+  display: flex; /* This will center your image if it's not full-width */
+  align-items: center;
   justify-content: center;
 }
 
 .card-image img {
-  max-width: 100%;
+  width: 70%;
   height: auto;
+  padding: 15px;
 }
 
 .card-buttons {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+  flex-direction: column; /* Stack your buttons vertically */
+  align-items: center; /* Center buttons horizontally */
+  justify-content: center; /* Center buttons vertically if there's extra space */
+  padding: 20px; /* Add some padding */
 }
 
 .btn {
   text-decoration: none;
   color: #fff;
   background-color: #007bff;
-  padding: 10px 15px;
   border-radius: 5px;
   transition: background-color 0.3s;
-  margin-bottom: 10px; /* Düğmeler arasında boşluk */
+  margin-bottom: 10px; /* Add space between buttons */
   text-align: center;
-  width: 80%; /* Düğmelerin genişliğini ayarla */
+  width: 43%; /* Make buttons wider, adjust to your liking */
 }
 
 .btn:hover {
   background-color: #0056b3;
 }
 
-/* Gerekirse yanıt verme için medya sorguları ekleyin */
+/* Add media queries if necessary to handle responsiveness */
 @media (max-width: 768px) {
   .card {
     flex-direction: column;
   }
 
-  .card-description, .card-image, .card-buttons {
-    width: 100%; /* Tam genişlik kullan */
+  .card-left, .card-right {
+    flex: none; /* Reset flex so they take up full width */
+    width: 100%;
   }
 }
+
 .accordion {
   --bs-accordion-color: #212529;
   --bs-accordion-bg: #fff;
