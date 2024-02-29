@@ -4148,47 +4148,51 @@ textarea.form-control-lg {
   --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.1);
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
+/* Ana kart stilini belirle */
 .card {
   display: flex;
   background-color: #fff;
   border: 5px solid #ddd;
   border-radius: 5px;
   overflow: hidden;  
-  width: 900px; /* Kartın genişliği */
-  height: 400px; /* Kartın yüksekliği */
+  width: 900px;
+  height: auto; /* Yükseklik otomatik ayarlansın */
 }
 
+/* Sol taraf için stiller */
 .card-left {
- flex: 45%; /* Sol taraf için %30 genişlik */
-  /* İçeriğin düzgün görünmesi için gerekli olabilecek diğer stiller */
+  flex: 0 0 45%; /* Sabit genişlik */
   padding: 15px;
   font-size: 13px;
+  background-color: #f0f0f0; /* Sol taraf için arka plan rengi */
 }
 
-
+/* Sağ taraf için stiller */
 .card-right {
-  flex: 55%;
-  /* İçeriğin düzgün görünmesi için gerekli olabilecek diğer stiller */
-} 
+  flex: 1; /* Geri kalan alanı doldur */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* İçerikleri yatay olarak ortala */
+  padding: 15px;
+}
+
+/* Resim stilini belirle */
 .card-image {
-  width: 120%; /* Ensure the image container fills the right side */
-  display: flex; /* This will center your image if it's not full-width */
-  align-items: center;
-  justify-content: center;
+  width: 100%; /* Konteyner genişliği */
+  margin-bottom: 20px; /* Butonlarla arasında boşluk */
 }
 
 .card-image img {
-  width: 70%;
-  height: auto;
-  padding: 15px;
+  width: auto; /* Resmin orijinal oranını koru */
+  max-width: 100%; /* Konteyneri aşmasın */
+  height: auto; /* Yükseklik otomatik ayarlansın */
 }
 
+/* Buton stillerini belirle */
 .card-buttons {
+  width: 100%; /* Butonlar için tam genişlik */
   display: flex;
-  flex-direction: column; /* Stack your buttons vertically */
-  align-items: center; /* Center buttons horizontally */
-  justify-content: center; /* Center buttons vertically if there's extra space */
-  padding: 20px; /* Add some padding */
+  justify-content: space-evenly; /* Butonları eşit aralıklı hizala */
 }
 
 .btn {
@@ -4197,26 +4201,43 @@ textarea.form-control-lg {
   background-color: #007bff;
   border-radius: 5px;
   transition: background-color 0.3s;
-  margin-bottom: 10px; /* Add space between buttons */
+  padding: 10px 20px; /* Buton içi boşluk */
   text-align: center;
-  width: 43%; /* Make buttons wider, adjust to your liking */
+  width: auto; /* İçerik genişliğine göre ayarla */
+  margin: 0 10px; /* Butonlar arasında boşluk */
 }
 
 .btn:hover {
   background-color: #0056b3;
 }
 
-/* Add media queries if necessary to handle responsiveness */
+/* Responsiveness */
 @media (max-width: 768px) {
   .card {
     flex-direction: column;
+    width: auto; /* Ekran genişliğine göre ayarla */
   }
 
   .card-left, .card-right {
-    flex: none; /* Reset flex so they take up full width */
+    flex: none;
     width: 100%;
-  }
-}
+    padding: 15px;
+    }
+    
+    .card-image {
+    margin-bottom: 10px;
+    }
+    
+    .card-buttons {
+    flex-direction: column;
+    align-items: center;
+    }
+    
+    .btn {
+    width: auto;
+    margin: 5px;
+    }
+    }
 
 .accordion {
   --bs-accordion-color: #212529;
