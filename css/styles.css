@@ -4157,8 +4157,22 @@ textarea.form-control-lg {
   overflow: hidden;  
   width: 900px;
   height: auto; /* Yükseklik otomatik ayarlansın */
+  font-family: 'Inika', serif;
+}
+.card-image img {
+  width: auto; /* Resmin orijinal oranını koru */
+  max-width: 100%; /* Konteyneri aşmasın */
+  height: auto; /* Yükseklik otomatik ayarlansın */
+  border-radius: 15px; /* Resmin kenarlarına oval bir görünüm ver */
+  margin-top: 20px; /* Resmi yukarıdan aşağı itmek için */
 }
 
+.card-buttons {
+  width: 100%; /* Butonlar için tam genişlik */
+  display: flex;
+  justify-content: space-evenly; /* Butonları eşit aralıklı hizala */
+  margin-top: 20px; /* Butonları resmin altından aşağı al */
+}
 /* Sol taraf için stiller */
 .card-left {
   flex: 0 0 45%; /* Sabit genişlik */
@@ -4198,7 +4212,7 @@ textarea.form-control-lg {
 .btn {
   text-decoration: none;
   color: #fff;
-  background-color: #007bff;
+  background-color: #31bd9d;
   border-radius: 5px;
   transition: background-color 0.3s;
   padding: 10px 20px; /* Buton içi boşluk */
