@@ -7,10 +7,151 @@
     <meta name="author" content="Kadir Cem Yilmaz" />
     <title>Blog - Kadir Cem Yilmaz</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,600;0,700;1,700&family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
     <link href="css/styles.css" rel="stylesheet" />
+    
+    <style>
+        /* --- SANZO WADA COLOR PALETTE --- */
+        :root {
+            --sanzo-blue: #064f6e;
+            --sanzo-orange: #f99d1b;
+            --sanzo-cream: #f5ecc2;
+        }
+
+        /* --- TYPOGRAPHY AYARLARI (KANIT + RUBIK) --- */
+        
+        /* BAŞLIKLAR: Kanit (Modern, Güçlü, Dinamik) */
+        h1, h2, h3, h4, h5, h6, .navbar-brand, .masthead-heading, .card-title {
+            font-family: 'Kanit', sans-serif !important;
+            font-weight: 700; /* Kalın olsun */
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        
+        /* GÖVDE METİNLERİ: Rubik (Yuvarlatılmış, Samimi, Modern) */
+        body, p, .lead, .nav-link, .btn, .footer, .copyright, .text-muted, li, small {
+            font-family: 'Rubik', sans-serif !important;
+        }
+
+        /* GENEL AYARLAR */
+        body {
+            background-color: var(--sanzo-cream) !important;
+            color: var(--sanzo-blue) !important;
+        }
+
+        /* NAVBAR */
+        #mainNav {
+            background-color: var(--sanzo-blue) !important;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        
+        /* HEADER (MASTHEAD) */
+        header.masthead {
+            background-color: var(--sanzo-blue) !important;
+            padding-top: 11rem !important;
+            padding-bottom: 6rem !important;
+        }
+
+        /* HEADER TEXT COLORS */
+        .masthead-heading, .masthead-subheading, .text-white {
+            color: var(--sanzo-cream) !important;
+        }
+
+        /* LINKS & NAV ITEMS */
+        #mainNav .nav-link {
+            color: var(--sanzo-cream) !important;
+            font-weight: 500; /* Rubik orta kalınlık */
+        }
+        #mainNav .nav-link.active, #mainNav .nav-link:hover {
+            color: var(--sanzo-orange) !important;
+        }
+
+        /* DIVIDERS & ICONS */
+        .divider-custom .divider-custom-line {
+            background-color: var(--sanzo-orange) !important;
+        }
+        .divider-custom .divider-custom-icon {
+            color: var(--sanzo-orange) !important;
+        }
+        .divider-light .divider-custom-line {
+            background-color: var(--sanzo-cream) !important;
+        }
+        .divider-light .divider-custom-icon {
+            color: var(--sanzo-orange) !important;
+        }
+
+        /* CARD DESIGN (BLOG POSTS) */
+        .card {
+            background-color: #ffffff;
+            border: 2px solid var(--sanzo-blue);
+            border-radius: 15px;
+            box-shadow: 5px 5px 0px var(--sanzo-orange);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+             transform: translateY(-2px);
+        }
+
+        .card-title {
+            color: var(--sanzo-blue) !important;
+            /* Kanit fontu yukarıda h2, h3 vb. ile zaten ayarlandı */
+        }
+
+        .text-muted {
+            color: #6c757d !important;
+        }
+
+        /* BUTTONS */
+        .btn {
+            transition: all 0.3s ease-in-out !important;
+            font-weight: 500;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+
+        .btn-primary, .btn-xl {
+            background-color: var(--sanzo-orange) !important;
+            border-color: var(--sanzo-orange) !important;
+            color: #fff !important;
+        }
+        .btn-primary:hover {
+            background-color: #d68515 !important;
+        }
+
+        /* FOOTER */
+        .footer {
+            background-color: var(--sanzo-blue) !important;
+            color: var(--sanzo-cream) !important;
+        }
+        .copyright {
+            background-color: #04384f !important;
+            color: var(--sanzo-cream) !important;
+        }
+
+        /* SOCIAL ICONS */
+        .btn-social {
+            border-width: 2px;
+            border-color: var(--sanzo-orange) !important;
+            color: var(--sanzo-orange) !important;
+            background-color: transparent !important;
+        }
+        .btn-social:hover {
+            background-color: var(--sanzo-orange) !important;
+            color: var(--sanzo-blue) !important;
+            border-color: var(--sanzo-orange) !important;
+            transform: translateY(-5px);
+        }
+    </style>
 </head>
 <body id="page-top">
 
@@ -24,14 +165,13 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html#portfolio">Portfolio</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html#about">About</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded active" href="blog.html">Blog</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="blog.html">Blog</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="masthead bg-primary text-white text-center" style="padding-top: 120px; padding-bottom: 50px;">
+    <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
             <h1 class="masthead-heading text-uppercase mb-0">Blog & Insights</h1>
             <div class="divider-custom divider-light">
@@ -46,22 +186,18 @@
     <section class="page-section" id="blog-list">
         <div class="container">
             
-            <div class="card mb-5 shadow-sm">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h2 class="card-title text-secondary text-uppercase">Video Games and Aggression</h2>
-                            <p class="text-muted"><small><i class="far fa-calendar-alt"></i> May 20, 2024 | <i class="fas fa-tag"></i> Academic Research</small></p>
-                            <p class="card-text lead">
-                                A methodological review examining the relationship between video games and aggression. This report discusses the "cause" and "effect" perspectives, evaluating scientific disagreements in light of recent studies like those by Desai et al. (2021) regarding stress relief and gaming.
-                            </p>
-                            <a href="yazilar/proje-1.html" class="btn btn-primary mt-3">Read Full Article &rarr;</a>
-                        </div>
-                    </div>
+            <div class="card mb-5">
+                <div class="card-body p-4">
+                    <h2 class="card-title text-uppercase">Video Games and Aggression</h2>
+                    <p class="text-muted"><small><i class="far fa-calendar-alt"></i> May 20, 2024 | <i class="fas fa-tag"></i> Academic Research</small></p>
+                    <p class="card-text lead">
+                        A methodological review examining the relationship between video games and aggression. This report discusses the "cause" and "effect" perspectives, evaluating scientific disagreements in light of recent studies like those by Desai et al. (2021) regarding stress relief and gaming.
+                    </p>
+                    <a href="yazilar/proje-1.html" class="btn btn-primary mt-3">Read Full Article &rarr;</a>
                 </div>
             </div>
 
-            </div>
+        </div>
     </section>
 
     <footer class="footer text-center">
@@ -92,10 +228,10 @@
         </div>
     </footer>
 
-    <div class="copyright py-4 text-center text-white">
-        <div class="container"><small>Copyright &copy; Kadir Cem Yilmaz 2024</small></div>
+    <div class="copyright py-4 text-center">
+        <div class="container"><small>Copyright &copy; Kadir Cem Yilmaz 2025</small></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+</body>
 </html>

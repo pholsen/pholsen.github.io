@@ -8,28 +8,139 @@
     <title>Game Aggression Report - Kadir Cem Yilmaz</title>
     
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+    
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,600;0,700;1,700&family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <link href="../css/styles.css" rel="stylesheet" />
     
     <style>
-        /* Reading optimization */
+        /* --- SANZO WADA COLOR PALETTE --- */
+        :root {
+            --sanzo-blue: #064f6e;
+            --sanzo-orange: #f99d1b;
+            --sanzo-cream: #f5ecc2;
+        }
+
+        /* --- TYPOGRAPHY AYARLARI (KANIT + RUBIK) --- */
+        
+        /* BAŞLIKLAR: Kanit (Modern, Güçlü, Dinamik) */
+        h1, h2, h3, h4, h5, h6, .navbar-brand, .masthead-heading, .card-title {
+            font-family: 'Kanit', sans-serif !important;
+            font-weight: 700; 
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        
+        /* GÖVDE METİNLERİ: Rubik (Yuvarlatılmış, Samimi, Modern) */
+        body, p, .lead, .nav-link, .btn, .footer, .copyright, .text-muted, li, small, .report-text {
+            font-family: 'Rubik', sans-serif !important;
+        }
+
+        /* GENEL AYARLAR */
+        body {
+            background-color: var(--sanzo-cream) !important;
+            color: var(--sanzo-blue) !important;
+        }
+
+        /* NAVBAR */
+        #mainNav {
+            background-color: var(--sanzo-blue) !important;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        #mainNav .nav-link {
+            color: var(--sanzo-cream) !important;
+            font-weight: 500;
+        }
+        #mainNav .nav-link.active, #mainNav .nav-link:hover {
+            color: var(--sanzo-orange) !important;
+        }
+
+        /* HEADER (MASTHEAD) */
+        header.masthead {
+            background-color: var(--sanzo-blue) !important;
+            padding-top: 11rem !important; 
+            padding-bottom: 6rem !important;
+            color: var(--sanzo-cream) !important;
+        }
+        
+        /* HEADER TEXT COLORS */
+        .masthead-heading, .masthead-subheading, .text-white, .mt-2 {
+            color: var(--sanzo-cream) !important;
+        }
+
+        /* DIVIDERS & ICONS (Header içi) */
+        .divider-light .divider-custom-line {
+            background-color: var(--sanzo-cream) !important;
+        }
+        .divider-light .divider-custom-icon {
+            color: var(--sanzo-orange) !important;
+        }
+
+        /* RAPOR METNİ AYARLARI */
         .report-text {
             font-size: 1.1rem;
             line-height: 1.8;
-            color: #2c3e50;
+            color: var(--sanzo-blue) !important; 
             text-align: justify;
         }
-        .citation {
-            color: #6c757d;
+        
+        /* Yazı içindeki başlıklar (h3) */
+        .text-secondary {
+            color: var(--sanzo-blue) !important;
         }
+
+        .citation {
+            color: var(--sanzo-blue) !important;
+            opacity: 0.7;
+        }
+        
         .chart-caption {
             font-size: 0.9rem;
-            color: #6c757d;
+            color: var(--sanzo-blue) !important;
+            opacity: 0.8;
             font-style: italic;
             margin-top: 10px;
+        }
+        
+        /* Çizgiler */
+        hr {
+            border-top-color: var(--sanzo-blue) !important;
+            opacity: 0.2;
+        }
+
+        /* BUTTONS */
+        .btn {
+            transition: all 0.3s ease-in-out !important;
+            font-weight: 500;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Geri Dön Butonu (Krem zemin üzerinde Mavi Çerçeve) */
+        .btn-outline-dark {
+            color: var(--sanzo-blue) !important;
+            border-color: var(--sanzo-blue) !important;
+        }
+        .btn-outline-dark:hover {
+            background-color: var(--sanzo-blue) !important;
+            color: var(--sanzo-cream) !important;
+        }
+
+        /* FOOTER */
+        .footer {
+            background-color: var(--sanzo-blue) !important;
+            color: var(--sanzo-cream) !important;
+        }
+        .copyright {
+            background-color: #04384f !important;
+            color: var(--sanzo-cream) !important;
         }
     </style>
 </head>
@@ -59,8 +170,8 @@
                 <div class="divider-custom-icon"><i class="fas fa-book-open"></i></div>
                 <div class="divider-custom-line"></div>
             </div>
-            <p class="masthead-subheading font-weight-light mb-0">Methods for Validating and Valuing Information</p>
-            <p class="mt-2">Student: Kadir Cem Yilmaz (65704)</p>
+            <p class="masthead-subheading font-weight-light mb-0">Methods for Validating and Valuing Information Course Report</p>
+            <p class="mt-2 fst-italic">Prepared by Kadir Cem Yilmaz</p>
         </div>
     </header>
 
@@ -104,7 +215,7 @@
                     </p>
 
                     <div class="text-center my-5">
-                        <img src="../assets/img/stress-chart.png" class="img-fluid rounded border p-2" alt="Comparison of stress levels between meditation and video games">
+                        <img src="../assets/img/stress-chart.png" class="img-fluid rounded border p-2" alt="Comparison of stress levels between meditation and video games" style="border-color: #064f6e !important;">
                         <p class="chart-caption">Figure 1: Pre-and post-PSM-9 scores of participants in mindfulness-meditation (Desai et al. 2021).</p>
                     </div>
 
@@ -136,7 +247,7 @@
 
                     <hr class="my-5">
 
-                    <h3 class="text-uppercase mb-4">Bibliography</h3>
+                    <h3 class="text-secondary text-uppercase mb-4">Bibliography</h3>
                     <ul class="list-unstyled" style="font-size: 0.9rem;">
                         <li class="mb-3">Anderson, C. A., and K. E. Dill. 2000. "Video games and aggressive thoughts, feelings, and behavior in the laboratory and in life." <em>Journal of Personality and Social Psychology</em> 78 (4): 772-790.</li>
                         <li class="mb-3">Carnagey, N. L., and C. A. Anderson. 2005. "Violent video game exposure and aggression: A literature review." <em>Minerva Pediatrica</em> 57 (6): 337-358.</li>
@@ -166,7 +277,7 @@
 
     <footer class="footer text-center">
         <div class="container">
-            <small class="text-white">Copyright &copy; Kadir Cem Yilmaz 2024</small>
+            <small class="text-white">Copyright &copy; Kadir Cem Yilmaz 2025</small>
         </div>
     </footer>
 

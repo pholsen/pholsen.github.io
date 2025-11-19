@@ -7,53 +7,185 @@
         <meta name="author" content="Kadir Cem Yilmaz" />
         <title>Kadir Cem Yilmaz - Portfolio</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css2?family=Inika&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,600;0,700;1,700&family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+        
         <link href="css/styles.css" rel="stylesheet" />
+        
         <style>
-            /* ÖZEL AYARLAR (Resim ve Yazı Boyutları) */
+            /* --- SANZO WADA COLOR PALETTE --- */
+            :root {
+                --sanzo-blue: #064f6e;
+                --sanzo-orange: #f99d1b;
+                --sanzo-cream: #f5ecc2;
+            }
+
+            /* --- TYPOGRAPHY AYARLARI (KANIT + RUBIK) --- */
             
-            /* Profil Resmi Ayarı */
+            /* BAŞLIKLAR: Kanit (Modern, Güçlü, Dinamik) */
+            h1, h2, h3, h4, h5, h6, .navbar-brand, .masthead-heading, .page-section-heading, .card-title {
+                font-family: 'Kanit', sans-serif !important;
+                font-weight: 700; /* Kalın olsun */
+                letter-spacing: 0.5px;
+                text-transform: uppercase; /* Kanit büyük harfle çok güzel durur */
+            }
+            
+            /* Masthead başlığına hafif bir eğiklik (italic) katalım, oyun logosu gibi dursun */
+            .masthead-heading-custom {
+                font-style: italic;
+            }
+
+            /* GÖVDE METİNLERİ: Rubik (Yuvarlatılmış, Samimi, Modern) */
+            body, p, .lead, .nav-link, .btn, .footer, .copyright, .text-muted, li {
+                font-family: 'Rubik', sans-serif !important;
+            }
+
+            /* GENEL AYARLAR */
+            body {
+                background-color: var(--sanzo-cream) !important;
+                color: var(--sanzo-blue) !important;
+            }
+
+            /* NAVBAR */
+            #mainNav {
+                background-color: var(--sanzo-blue) !important;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
+            
+            /* HEADER (MASTHEAD) */
+            header.masthead {
+                background-color: var(--sanzo-blue) !important;
+                padding-top: 11rem !important; 
+                padding-bottom: 6rem !important;
+            }
+
+            /* HEADER TEXT COLORS */
+            .masthead-heading, .masthead-subheading, .text-white {
+                color: var(--sanzo-cream) !important;
+            }
+
+            /* LINKS & NAV ITEMS */
+            #mainNav .nav-link {
+                color: var(--sanzo-cream) !important;
+                font-weight: 500; /* Rubik orta kalınlık */
+            }
+            #mainNav .nav-link.active, #mainNav .nav-link:hover {
+                color: var(--sanzo-orange) !important;
+            }
+
+            /* DIVIDERS & ICONS */
+            .divider-custom .divider-custom-line {
+                background-color: var(--sanzo-orange) !important;
+            }
+            .divider-custom .divider-custom-icon {
+                color: var(--sanzo-orange) !important;
+            }
+            
+            /* PORTFOLIO SECTION */
+            .page-section-heading {
+                color: var(--sanzo-blue) !important;
+            }
+            
+            /* CARD DESIGN */
+            .card {
+                background-color: #ffffff;
+                border: 2px solid var(--sanzo-blue);
+                border-radius: 15px;
+                box-shadow: 5px 5px 0px var(--sanzo-orange);
+            }
+
+            /* BUTTONS - GENEL TIKLANABİLİRLİK EFEKTİ */
+            .btn {
+                transition: all 0.3s ease-in-out !important;
+                font-weight: 500;
+            }
+            .btn:hover {
+                transform: translateY(-3px); 
+                box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
+                cursor: pointer;
+            }
+
+            /* PRIMARY BUTTONS (Turuncu Butonlar) */
+            .btn-primary, .btn-xl {
+                background-color: var(--sanzo-orange) !important;
+                border-color: var(--sanzo-orange) !important;
+                color: #fff !important;
+            }
+            .btn-primary:hover {
+                background-color: #d68515 !important; 
+            }
+
+            /* OUTLINE BUTTONS (Saydam Butonlar) */
+            .btn-outline-light {
+                color: var(--sanzo-cream) !important;
+                border-color: var(--sanzo-cream) !important;
+            }
+            .btn-outline-light:hover {
+                background-color: var(--sanzo-orange) !important;
+                border-color: var(--sanzo-orange) !important;
+                color: #fff !important;
+            }
+
+            /* FOOTER */
+            .footer {
+                background-color: var(--sanzo-blue) !important;
+                color: var(--sanzo-cream) !important;
+            }
+            .copyright {
+                background-color: #04384f !important;
+                color: var(--sanzo-cream) !important;
+            }
+
+            /* SOCIAL ICONS */
+            .btn-social {
+                border-width: 2px;
+                border-color: var(--sanzo-orange) !important; 
+                color: var(--sanzo-orange) !important;       
+                background-color: transparent !important;
+            }
+            .btn-social:hover {
+                background-color: var(--sanzo-orange) !important; 
+                color: var(--sanzo-blue) !important;             
+                border-color: var(--sanzo-orange) !important;
+                transform: translateY(-5px); 
+            }
+
+            /* --- LAYOUT AYARLARI --- */
             .masthead-avatar-custom {
                 width: 100%;
-                max-width: 200px; /* Resmi 200px ile sınırladık */
+                max-width: 200px; 
                 height: auto;
-                border: 4px solid white; /* Çerçeve kalınlığı */
-                box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Hafif gölge */
+                border: 4px solid var(--sanzo-cream);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.2);
             }
 
-            /* İsim Başlığı Ayarı */
             .masthead-heading-custom {
-                font-size: 1.8rem; /* Mobilde varsayılan boyut */
+                font-size: 1.8rem; 
                 line-height: 1.2;
-                white-space: nowrap; /* Asla alt satıra geçme */
-                overflow: visible; 
+                white-space: nowrap; 
+                overflow: visible;
+                color: var(--sanzo-cream) !important;
             }
 
-            /* Masaüstü (Geniş Ekran) İçin Ayarlar */
             @media (min-width: 992px) {
                 .masthead-avatar-custom {
-                    max-width: 220px; /* Masaüstünde resim bir tık daha büyük olabilir */
+                    max-width: 220px; 
                 }
                 .masthead-heading-custom {
-                    font-size: 2.2rem; /* Masaüstünde yazı boyutu */
+                    font-size: 2.5rem; 
                 }
             }
-
-            /* Sol sütunun içeriğini ortalamak için */
+            
             .col-lg-4.text-center.text-lg-start {
                 display: flex;
                 flex-direction: column;
-                align-items: center; /* İçeriği yatayda ortala */
-                text-align: center !important; /* Metni de ortala */
-            }
-            @media (min-width: 992px) {
-                .col-lg-4.text-center.text-lg-start {
-                    align-items: flex-start; /* Büyük ekranlarda sola hizala */
-                    text-align: left !important; /* Metni sola hizala */
-                }
+                align-items: center;
+                text-align: center !important;
             }
         </style>
     </head>
@@ -68,7 +200,6 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#page-top">About</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="blog.html">Blog</a></li>
                     </ul>
                 </div>
@@ -79,21 +210,22 @@
             <div class="container">
                 <div class="row align-items-center">
                     
-                    <div class="col-lg-4 text-center text-lg-start mb-5 mb-lg-0">
+                    <div class="col-lg-4 text-center mb-5 mb-lg-0">
                         <img class="masthead-avatar-custom mb-4 rounded-circle" src="assets/img/avataaars.svg" alt="Kadir Cem Yilmaz" />
                         
                         <h1 class="masthead-heading-custom text-uppercase mb-0">Kadir Cem Yilmaz</h1>
                         
                         <p class="masthead-subheading font-weight-light mb-0" style="font-size: 1.2rem;">Game Designer & Unity Developer</p>
-                        <p class="font-weight-light mt-2"><i class="fas fa-map-marker-alt me-2"></i>Warsaw, Poland</p>
+                        <p class="font-weight-light mt-2 text-white"><i class="fas fa-map-marker-alt me-2"></i>Warsaw, Poland</p>
                     </div>
         
-                    <div class="col-lg-8 text-center text-lg-start ps-lg-5">
+                    <div class="col-lg-8 text-left">
                         <h2 class="text-uppercase mb-4 text-white">About Me</h2>
-                        <p class="lead">
+                        
+                        <p class="lead text-white">
                             Hi! I'm a passionate <strong>Game Designer</strong> and <strong>Developer</strong> currently based in Warsaw. With a Bachelor's in Digital Game Design and ongoing Master's studies in New Media, I specialize in creating engaging mechanics and narrative-driven experiences.
                         </p>
-                        <p class="lead">
+                        <p class="lead text-white">
                             My journey includes hands-on experience as a <strong>Game Design Intern</strong> at Root-Istanbul and a <strong>Game Tester</strong> at Digi Game Startup Studio. I love blending creativity with technical skills in Unity to build games that not only function well but also tell compelling stories. Whether it's designing card mechanics for deck-builders or debugging complex levels, I'm always ready for the next challenge.
                         </p>
                         
@@ -110,36 +242,38 @@
 
         <section class="page-section portfolio" id="portfolio">
             <div class="container">
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+                <h2 class="page-section-heading text-center text-uppercase mb-0">Portfolio</h2>
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="card">
-                      <div class="card-left">
-                        <h4 class="inika-font">Folk’s Quest</h4>
-                        
-                        <p>Game Designer and Unity Developer</p>
-                        <p>A 2D rouge-like deck building card game.</p>
-                        <p>“The Folk” is a city and also a kingdom. There is a sea beside Folk city called “Asvar” Folk’s citizens are afraid of water and their religion says that they shouldn't touch the big waters. One day A man called “The Explorer” comes to Folk and says to everyone that “There is a land across the Asvar”. The story begins.</p>
-                        <h5 class="inika-font">What I worked on:</h5>
-                        <ul>
-                          <li>Led design and development, establishing core gameplay.</li>
-                          <li>Designing cards, relics, potions and all other stuff</li>
-                          <li>Wrote narrative and dialogue.</li>
-                          <li>Prototyping in Unity Engine</li>
-                        </ul>
-                      </div>
-                      <div class="card-right">
-                        <div class="card-image">
-                          <img src="folks_quest.png" alt="Gameplay screenshot">
-                        </div>
-                        <div class="card-buttons">
-                          <a href="https://enescubuk.itch.io/absorb-with-cards" target="_blank" class="btn">Play on itch.io</a>
-                          <a href="https://drive.google.com/drive/folders/1jAZriR9zSn3bjgSWP-kjbHbm7GbNNggL?usp=sharing" target="_blank" class="btn">Documents</a>
-                        </div>
+                    <div class="card p-4">
+                      <div class="row">
+                          <div class="col-lg-6 card-left">
+                            <h4 class="card-title text-uppercase" style="color: #064f6e;">Folk’s Quest</h4>
+                            
+                            <p class="fw-bold">Game Designer and Unity Developer</p>
+                            <p>A 2D rouge-like deck building card game.</p>
+                            <p>“The Folk” is a city and also a kingdom. There is a sea beside Folk city called “Asvar” Folk’s citizens are afraid of water and their religion says that they shouldn't touch the big waters. One day A man called “The Explorer” comes to Folk and says to everyone that “There is a land across the Asvar”. The story begins.</p>
+                            <h5 class="card-title mt-3" style="font-size: 1.2rem;">What I worked on:</h5>
+                            <ul>
+                              <li>Led design and development, establishing core gameplay.</li>
+                              <li>Designing cards, relics, potions and all other stuff</li>
+                              <li>Wrote narrative and dialogue.</li>
+                              <li>Prototyping in Unity Engine</li>
+                            </ul>
+                          </div>
+                          <div class="col-lg-6 card-right text-center d-flex flex-column justify-content-center">
+                            <div class="card-image mb-3">
+                              <img src="folks_quest.png" alt="Gameplay screenshot" class="img-fluid rounded border border-2" style="border-color: #064f6e !important;">
+                            </div>
+                            <div class="card-buttons">
+                              <a href="https://enescubuk.itch.io/absorb-with-cards" target="_blank" class="btn btn-primary m-1">Play on itch.io</a>
+                              <a href="https://drive.google.com/drive/folders/1jAZriR9zSn3bjgSWP-kjbHbm7GbNNggL?usp=sharing" target="_blank" class="btn btn-primary m-1">Documents</a>
+                            </div>
+                          </div>
                       </div>
                     </div>
                   </div>
@@ -172,7 +306,7 @@
                 </div>
             </div>
         </footer>
-        <div class="copyright py-4 text-center text-white">
+        <div class="copyright py-4 text-center">
             <div class="container"><small>Copyright &copy; Kadir Cem Yilmaz 2025</small></div>
         </div>
 
