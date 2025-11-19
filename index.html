@@ -3,22 +3,61 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Kadir Cem Yilmaz-Portfolio</title>
-        <!-- Favicon-->
+        <meta name="description" content="Kadir Cem Yilmaz - Game Designer & Developer Portfolio" />
+        <meta name="author" content="Kadir Cem Yilmaz" />
+        <title>Kadir Cem Yilmaz - Portfolio</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css2?family=Inika&display=swap" rel="stylesheet">
-        <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            /* ÖZEL AYARLAR (Resim ve Yazı Boyutları) */
+            
+            /* Profil Resmi Ayarı */
+            .masthead-avatar-custom {
+                width: 100%;
+                max-width: 200px; /* Resmi 200px ile sınırladık */
+                height: auto;
+                border: 4px solid white; /* Çerçeve kalınlığı */
+                box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Hafif gölge */
+            }
+
+            /* İsim Başlığı Ayarı */
+            .masthead-heading-custom {
+                font-size: 1.8rem; /* Mobilde varsayılan boyut */
+                line-height: 1.2;
+                white-space: nowrap; /* Asla alt satıra geçme */
+                overflow: visible; 
+            }
+
+            /* Masaüstü (Geniş Ekran) İçin Ayarlar */
+            @media (min-width: 992px) {
+                .masthead-avatar-custom {
+                    max-width: 220px; /* Masaüstünde resim bir tık daha büyük olabilir */
+                }
+                .masthead-heading-custom {
+                    font-size: 2.2rem; /* Masaüstünde yazı boyutu */
+                }
+            }
+
+            /* Sol sütunun içeriğini ortalamak için */
+            .col-lg-4.text-center.text-lg-start {
+                display: flex;
+                flex-direction: column;
+                align-items: center; /* İçeriği yatayda ortala */
+                text-align: center !important; /* Metni de ortala */
+            }
+            @media (min-width: 992px) {
+                .col-lg-4.text-center.text-lg-start {
+                    align-items: flex-start; /* Büyük ekranlarda sola hizala */
+                    text-align: left !important; /* Metni sola hizala */
+                }
+            }
+        </style>
     </head>
     <body id="page-top">
-        <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand" href="#page-top">Kadir Cem Yilmaz</a>
@@ -29,43 +68,55 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#page-top">About</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="blog.html">Blog</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <!-- Masthead-->
-        <header class="masthead bg-primary text-white text-center">
-            <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
-                <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">Kadir Cem Yilmaz</h1>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
+        
+        <header class="masthead bg-primary text-white">
+            <div class="container">
+                <div class="row align-items-center">
+                    
+                    <div class="col-lg-4 text-center text-lg-start mb-5 mb-lg-0">
+                        <img class="masthead-avatar-custom mb-4 rounded-circle" src="assets/img/avataaars.svg" alt="Kadir Cem Yilmaz" />
+                        
+                        <h1 class="masthead-heading-custom text-uppercase mb-0">Kadir Cem Yilmaz</h1>
+                        
+                        <p class="masthead-subheading font-weight-light mb-0" style="font-size: 1.2rem;">Game Designer & Unity Developer</p>
+                        <p class="font-weight-light mt-2"><i class="fas fa-map-marker-alt me-2"></i>Warsaw, Poland</p>
+                    </div>
+        
+                    <div class="col-lg-8 text-center text-lg-start ps-lg-5">
+                        <h2 class="text-uppercase mb-4 text-white">About Me</h2>
+                        <p class="lead">
+                            Hi! I'm a passionate <strong>Game Designer</strong> and <strong>Developer</strong> currently based in Warsaw. With a Bachelor's in Digital Game Design and ongoing Master's studies in New Media, I specialize in creating engaging mechanics and narrative-driven experiences.
+                        </p>
+                        <p class="lead">
+                            My journey includes hands-on experience as a <strong>Game Design Intern</strong> at Root-Istanbul and a <strong>Game Tester</strong> at Digi Game Startup Studio. I love blending creativity with technical skills in Unity to build games that not only function well but also tell compelling stories. Whether it's designing card mechanics for deck-builders or debugging complex levels, I'm always ready for the next challenge.
+                        </p>
+                        
+                        <div class="mt-4">
+                            <a class="btn btn-xl btn-outline-light me-3" href="#portfolio">
+                                <i class="fas fa-arrow-down me-2"></i> See My Work
+                            </a>
+                        </div>
+                    </div>
+        
                 </div>
-                <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Game Designer - Game Tester - Unity Developer</p>
             </div>
         </header>
-        <!-- Portfolio Section-->
+
         <section class="page-section portfolio" id="portfolio">
             <div class="container">
-                <!-- Portfolio Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
-                <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
-                <!-- Portfolio Grid Items -->
                 <div class="row justify-content-center">
-                    <!-- Portfolio Item 1 -->
                     <div class="card">
                       <div class="card-left">
                         <h4 class="inika-font">Folk’s Quest</h4>
@@ -92,64 +143,39 @@
                       </div>
                     </div>
                   </div>
-            </div>
-        </section>
-        <!-- About Section-->
-        <section class="page-section bg-primary text-white mb-0" id="about">
-            <div class="container">
-                <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- About Section Content-->
-                <div class="row">
-                    <div class="col-lg-4 ms-auto"><p class="lead">I am a Digital Game Design student and passionate about game design and testing. I love games deeply, regularly playing both board and digital games.</p></div>
-                    <div class="col-lg-4 me-auto"><p class="lead"> My interest spans creating engaging experiences in digital card and board games, where I contribute to design and testing. I enjoy exploring new game mechanics and stories, always looking to improve my skills.</p></div>
-                </div>
 
             </div>
         </section>
-        <!-- Footer-->
+
         <footer class="footer text-center">
             <div class="container">
-                <div class="row">
-                    <!-- Footer Location-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Location</h4>
-                        <p class="lead mb-0">
-                            2215 John Daniel Drive
-                            <br />
-                            Clark, MO 65243
-                        </p>
-                    </div>
-                    <!-- Footer Social Icons-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Around the Web</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
-                    </div>
-                    <!-- Footer About Text-->
-                    <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
-                        <p class="lead mb-0">
-                            Freelance is a free to use, MIT licensed Bootstrap theme created by
-                            <a href="http://startbootstrap.com">Start Bootstrap</a>
-                            .
-                        </p>
+                <div class="row justify-content-center">
+                    <div class="col-lg-12 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Connect with Me</h4>
+                        
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://x.com/_pholsen" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/kadircemyilmaz/" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/pholsen" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+    
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://pholsen.itch.io/" target="_blank">
+                            <i class="fab fa-itch-io"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </footer>
-        <!-- Copyright Section-->
         <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright &copy; Your Website 2023</small></div>
+            <div class="container"><small>Copyright &copy; Kadir Cem Yilmaz 2025</small></div>
         </div>
 
-    </body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        </body>
 </html>
