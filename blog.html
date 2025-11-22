@@ -26,15 +26,13 @@
 
         /* --- TYPOGRAPHY AYARLARI (KANIT + RUBIK) --- */
         
-        /* BAŞLIKLAR: Kanit (Modern, Güçlü, Dinamik) */
         h1, h2, h3, h4, h5, h6, .navbar-brand, .masthead-heading, .card-title {
             font-family: 'Kanit', sans-serif !important;
-            font-weight: 700; /* Kalın olsun */
+            font-weight: 700; 
             letter-spacing: 0.5px;
             text-transform: uppercase;
         }
         
-        /* GÖVDE METİNLERİ: Rubik (Yuvarlatılmış, Samimi, Modern) */
         body, p, .lead, .nav-link, .btn, .footer, .copyright, .text-muted, li, small {
             font-family: 'Rubik', sans-serif !important;
         }
@@ -67,7 +65,7 @@
         /* LINKS & NAV ITEMS */
         #mainNav .nav-link {
             color: var(--sanzo-cream) !important;
-            font-weight: 500; /* Rubik orta kalınlık */
+            font-weight: 500; 
         }
         #mainNav .nav-link.active, #mainNav .nav-link:hover {
             color: var(--sanzo-orange) !important;
@@ -87,7 +85,7 @@
             color: var(--sanzo-orange) !important;
         }
 
-        /* CARD DESIGN (BLOG POSTS) */
+        /* CARD DESIGN */
         .card {
             background-color: #ffffff;
             border: 2px solid var(--sanzo-blue);
@@ -101,7 +99,6 @@
 
         .card-title {
             color: var(--sanzo-blue) !important;
-            /* Kanit fontu yukarıda h2, h3 vb. ile zaten ayarlandı */
         }
 
         .text-muted {
@@ -165,7 +162,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html#portfolio">Portfolio</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="blog.html">Blog</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded active" href="blog.html">Blog</a></li>
                 </ul>
             </div>
         </div>
@@ -179,21 +176,32 @@
                 <div class="divider-custom-icon"><i class="fas fa-pen-nib"></i></div>
                 <div class="divider-custom-line"></div>
             </div>
-            <p class="masthead-subheading font-weight-light mb-0">Academic Research, Game Design Notes, and Devlogs</p>
+            <p class="masthead-subheading font-weight-light mb-0">Academic Essays and Researchs, Game Design Notes, and Devlogs</p>
         </div>
     </header>
 
     <section class="page-section" id="blog-list">
         <div class="container">
-            
+
             <div class="card mb-5">
                 <div class="card-body p-4">
                     <h2 class="card-title text-uppercase">Video Games and Aggression</h2>
-                    <p class="text-muted"><small><i class="far fa-calendar-alt"></i> May 20, 2024 | <i class="fas fa-tag"></i> Academic Research</small></p>
+                    <p class="text-muted"><small><i class="far fa-calendar-alt"></i> June, 2025 | <i class="fas fa-tag"></i> Academic Essay</small></p>
                     <p class="card-text lead">
                         A methodological review examining the relationship between video games and aggression. This report discusses the "cause" and "effect" perspectives, evaluating scientific disagreements in light of recent studies like those by Desai et al. (2021) regarding stress relief and gaming.
                     </p>
                     <a href="blog/Game Aggression Report.html" class="btn btn-primary mt-3">Read Full Article &rarr;</a>
+                </div>
+            </div>
+            
+            <div class="card mb-5">
+                <div class="card-body p-4">
+                    <h2 class="card-title text-uppercase">The Role of Game Industry in Japan's Public Diplomacy</h2>
+                    <p class="text-muted"><small><i class="far fa-calendar-alt"></i> January, 2025 | <i class="fas fa-tag"></i> Academic Essay</small></p>
+                    <p class="card-text lead">
+                        This study examines the role of the Japanese gaming industry in the context of soft power and considers the impact of these products on global diplomacy. It explores how giants like Nintendo and Sony, through franchises like Pokémon and Zelda, have become vital tools in international relations and the "Cool Japan" initiative.
+                    </p>
+                    <a href="blog/Game Industry in Japan.html" class="btn btn-primary mt-3">Read Full Article &rarr;</a>
                 </div>
             </div>
 
