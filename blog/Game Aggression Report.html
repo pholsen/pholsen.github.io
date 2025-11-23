@@ -18,144 +18,51 @@
     <link href="../css/styles.css" rel="stylesheet" />
     
     <style>
-        /* --- SANZO WADA COLOR PALETTE --- */
-        :root {
-            --sanzo-blue: #064f6e;
-            --sanzo-orange: #f99d1b;
-            --sanzo-cream: #f5ecc2;
-        }
-
-        /* --- TYPOGRAPHY AYARLARI (KANIT + RUBIK) --- */
+        :root { --sanzo-blue: #064f6e; --sanzo-orange: #f99d1b; --sanzo-cream: #f5ecc2; }
+        body { background-color: var(--sanzo-cream) !important; color: var(--sanzo-blue) !important; font-family: 'Rubik', sans-serif !important; }
+        h1, h2, h3, h4, h5, h6, .navbar-brand, .masthead-heading, .card-title, caption { font-family: 'Kanit', sans-serif !important; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--sanzo-blue) !important; }
         
-        /* BAŞLIKLAR: Kanit (Modern, Güçlü, Dinamik) */
-        h1, h2, h3, h4, h5, h6, .navbar-brand, .masthead-heading, .card-title {
-            font-family: 'Kanit', sans-serif !important;
-            font-weight: 700; 
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
+        /* NAVBAR FIX */
+        #mainNav { background-color: var(--sanzo-blue) !important; padding-top: 1rem; padding-bottom: 1rem; }
+        #mainNav .navbar-brand { color: var(--sanzo-cream) !important; } /* İsim Rengi Düzeltildi */
+        #mainNav .nav-link { color: var(--sanzo-cream) !important; font-weight: 500; }
+        #mainNav .nav-link.active, #mainNav .nav-link:hover { color: var(--sanzo-orange) !important; }
         
-        /* GÖVDE METİNLERİ: Rubik (Yuvarlatılmış, Samimi, Modern) */
-        body, p, .lead, .nav-link, .btn, .footer, .copyright, .text-muted, li, small, .report-text {
-            font-family: 'Rubik', sans-serif !important;
-        }
+        /* HEADER FIX */
+        header.masthead { background-color: var(--sanzo-blue) !important; padding-top: 11rem !important; padding-bottom: 6rem !important; color: var(--sanzo-cream) !important; }
+        .masthead-heading, .masthead-subheading, .text-white, .mt-2 { color: var(--sanzo-cream) !important; }
+        .divider-light .divider-custom-line { background-color: var(--sanzo-cream) !important; }
+        .divider-light .divider-custom-icon { color: var(--sanzo-orange) !important; }
 
-        /* GENEL AYARLAR */
-        body {
-            background-color: var(--sanzo-cream) !important;
-            color: var(--sanzo-blue) !important;
-        }
-
-        /* NAVBAR */
-        #mainNav {
-            background-color: var(--sanzo-blue) !important;
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-        }
-        #mainNav .nav-link {
-            color: var(--sanzo-cream) !important;
-            font-weight: 500;
-        }
-        #mainNav .nav-link.active, #mainNav .nav-link:hover {
-            color: var(--sanzo-orange) !important;
-        }
-
-        /* HEADER (MASTHEAD) */
-        header.masthead {
-            background-color: var(--sanzo-blue) !important;
-            padding-top: 11rem !important; 
-            padding-bottom: 6rem !important;
-            color: var(--sanzo-cream) !important;
-        }
-        
-        /* HEADER TEXT COLORS */
-        .masthead-heading, .masthead-subheading, .text-white, .mt-2 {
-            color: var(--sanzo-cream) !important;
-        }
-
-        /* DIVIDERS & ICONS (Header içi) */
-        .divider-light .divider-custom-line {
-            background-color: var(--sanzo-cream) !important;
-        }
-        .divider-light .divider-custom-icon {
-            color: var(--sanzo-orange) !important;
-        }
-
-        /* RAPOR METNİ AYARLARI */
-        .report-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--sanzo-blue) !important; 
-            text-align: justify;
-        }
-        
-        /* Yazı içindeki başlıklar (h3) */
-        .text-secondary {
-            color: var(--sanzo-blue) !important;
-        }
-
-        .citation {
-            color: var(--sanzo-blue) !important;
-            opacity: 0.7;
-        }
-        
-        .chart-caption {
-            font-size: 0.9rem;
-            color: var(--sanzo-blue) !important;
-            opacity: 0.8;
-            font-style: italic;
-            margin-top: 10px;
-        }
-        
-        /* Çizgiler */
-        hr {
-            border-top-color: var(--sanzo-blue) !important;
-            opacity: 0.2;
-        }
-
-        /* BUTTONS */
-        .btn {
-            transition: all 0.3s ease-in-out !important;
-            font-weight: 500;
-        }
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        /* Geri Dön Butonu (Krem zemin üzerinde Mavi Çerçeve) */
-        .btn-outline-dark {
-            color: var(--sanzo-blue) !important;
-            border-color: var(--sanzo-blue) !important;
-        }
-        .btn-outline-dark:hover {
-            background-color: var(--sanzo-blue) !important;
-            color: var(--sanzo-cream) !important;
-        }
-
-        /* FOOTER */
-        .footer {
-            background-color: var(--sanzo-blue) !important;
-            color: var(--sanzo-cream) !important;
-        }
-        .copyright {
-            background-color: #04384f !important;
-            color: var(--sanzo-cream) !important;
-        }
+        .footer { color: var(--sanzo-cream) !important; }
+        .report-text { font-size: 1.1rem; line-height: 1.8; text-align: justify; }
+        hr { border-top-color: var(--sanzo-blue) !important; opacity: 0.2; }
+        figure { margin: 2.5rem 0; text-align: center; }
+        figure img { border: 3px solid var(--sanzo-blue); border-radius: 10px; box-shadow: 5px 5px 0px var(--sanzo-orange); max-width: 100%; height: auto; }
+        figcaption { margin-top: 0.8rem; font-size: 0.95rem; font-style: italic; color: var(--sanzo-blue); font-weight: 500; }
+        .table-custom { background-color: #fff; border: 2px solid var(--sanzo-blue); border-radius: 10px; overflow: hidden; margin-bottom: 3rem; margin-top: 2rem; box-shadow: 5px 5px 0px rgba(6, 79, 110, 0.1); }
+        .table-custom thead { background-color: var(--sanzo-blue); color: var(--sanzo-cream); }
+        .table-custom th, .table-custom td { border-color: #dee2e6; padding: 1rem; }
+        .table-caption { caption-side: top; font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--sanzo-blue); font-weight: bold; text-align: center; }
+        .btn { transition: all 0.3s ease-in-out !important; font-weight: 500; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .btn-outline-dark { color: var(--sanzo-blue) !important; border-color: var(--sanzo-blue) !important; }
+        .btn-outline-dark:hover { background-color: var(--sanzo-blue) !important; color: var(--sanzo-cream) !important; }
+        .presentation-box { background-color: #fff; border: 2px dashed var(--sanzo-blue); padding: 3rem; border-radius: 15px; text-align: center; margin-top: 4rem; }
     </style>
 </head>
 <body id="page-top">
 
-    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="../index.html">Kadir Cem Yilmaz</a>
+            <a class="navbar-brand" href="index.html">Kadir Cem Yilmaz</a>
             <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../index.html#portfolio">Portfolio</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html#portfolio">Portfolio</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../blog.html">Back to Blog</a></li>
                 </ul>
             </div>

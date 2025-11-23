@@ -6,174 +6,48 @@
     <meta name="description" content="The Role of Game Industry in Japan's Public Diplomacy" />
     <meta name="author" content="Kadir Cem Yilmaz" />
     <title>Japan's Game Diplomacy - Kadir Cem Yilmaz</title>
-    
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
-    
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,600;0,700;1,700&family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
     <link href="../css/styles.css" rel="stylesheet" />
-    
     <style>
-        /* --- SANZO WADA COLOR PALETTE --- */
-        :root {
-            --sanzo-blue: #064f6e;
-            --sanzo-orange: #f99d1b;
-            --sanzo-cream: #f5ecc2;
-        }
-
-        /* --- TYPOGRAPHY AYARLARI (Referans Dosya ile Eşitlendi) --- */
+        :root { --sanzo-blue: #064f6e; --sanzo-orange: #f99d1b; --sanzo-cream: #f5ecc2; }
+        body { background-color: var(--sanzo-cream) !important; color: var(--sanzo-blue) !important; font-family: 'Rubik', sans-serif !important; }
+        h1, h2, h3, h4, h5, h6, .navbar-brand, .masthead-heading, .card-title, caption { font-family: 'Kanit', sans-serif !important; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--sanzo-blue) !important; }
         
-        /* BAŞLIKLAR: Kanit (Modern, Güçlü, Dinamik) */
-        h1, h2, h3, h4, h5, h6, .navbar-brand, .masthead-heading, .card-title, caption {
-            font-family: 'Kanit', sans-serif !important;
-            font-weight: 700; 
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            color: var(--sanzo-blue) !important;
-        }
+        /* NAVBAR FIX */
+        #mainNav { background-color: var(--sanzo-blue) !important; padding-top: 1rem; padding-bottom: 1rem; }
+        #mainNav .navbar-brand { color: var(--sanzo-cream) !important; } /* İsim Rengi */
+        #mainNav .nav-link { color: var(--sanzo-cream) !important; font-weight: 500; }
+        #mainNav .nav-link.active, #mainNav .nav-link:hover { color: var(--sanzo-orange) !important; }
         
-        /* GÖVDE METİNLERİ: Rubik (Yuvarlatılmış, Samimi, Modern) */
-        /* Burası düzeltildi: Tüm elementler açıkça belirtildi */
-        body, p, .lead, .nav-link, .btn, .footer, .copyright, .text-muted, li, small, .report-text, .masthead-subheading {
-            font-family: 'Rubik', sans-serif !important;
-        }
+        /* HEADER FIX */
+        header.masthead { background-color: var(--sanzo-blue) !important; padding-top: 11rem !important; padding-bottom: 6rem !important; color: var(--sanzo-cream) !important; }
+        .masthead-heading, .masthead-subheading, .text-white, .mt-2 { color: var(--sanzo-cream) !important; }
+        .divider-light .divider-custom-line { background-color: var(--sanzo-cream) !important; }
+        .divider-light .divider-custom-icon { color: var(--sanzo-orange) !important; }
 
-        /* GENEL AYARLAR */
-        body {
-            background-color: var(--sanzo-cream) !important;
-            color: var(--sanzo-blue) !important;
-        }
-
-        /* NAVBAR */
-        #mainNav {
-            background-color: var(--sanzo-blue) !important;
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-        }
-        #mainNav .nav-link {
-            color: var(--sanzo-cream) !important;
-            font-weight: 500;
-        }
-        #mainNav .nav-link.active, #mainNav .nav-link:hover {
-            color: var(--sanzo-orange) !important;
-        }
-
-        /* HEADER (MASTHEAD) */
-        header.masthead {
-            background-color: var(--sanzo-blue) !important;
-            padding-top: 11rem !important; 
-            padding-bottom: 6rem !important;
-            color: var(--sanzo-cream) !important;
-        }
-        
-        /* HEADER TEXT COLORS */
-        .masthead-heading, .masthead-subheading, .text-white, .mt-2 {
-            color: var(--sanzo-cream) !important;
-        }
-
-        /* DIVIDERS & ICONS (Header içi) */
-        .divider-light .divider-custom-line {
-            background-color: var(--sanzo-cream) !important;
-        }
-        .divider-light .divider-custom-icon {
-            color: var(--sanzo-orange) !important;
-        }
-
-        /* RAPOR METNİ AYARLARI */
-        .report-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--sanzo-blue) !important; 
-            text-align: justify;
-        }
-        
-        /* Çizgiler */
-        hr {
-            border-top-color: var(--sanzo-blue) !important;
-            opacity: 0.2;
-        }
-
-        /* TABLES - Customized for the theme */
-        .table-custom {
-            background-color: #fff;
-            border: 2px solid var(--sanzo-blue);
-            border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 3rem;
-            margin-top: 2rem;
-            box-shadow: 5px 5px 0px rgba(6, 79, 110, 0.1);
-        }
-        .table-custom thead {
-            background-color: var(--sanzo-blue);
-            color: var(--sanzo-cream);
-        }
-        .table-custom th, .table-custom td {
-            border-color: #dee2e6;
-            padding: 1rem;
-        }
-        .table-caption {
-            caption-side: top;
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            color: var(--sanzo-blue);
-            font-weight: bold;
-            text-align: center;
-        }
-
-        /* BUTTONS */
-        .btn {
-            transition: all 0.3s ease-in-out !important;
-            font-weight: 500;
-        }
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        /* Geri Dön Butonu (Krem zemin üzerinde Mavi Çerçeve) */
-        .btn-outline-dark {
-            color: var(--sanzo-blue) !important;
-            border-color: var(--sanzo-blue) !important;
-        }
-        .btn-outline-dark:hover {
-            background-color: var(--sanzo-blue) !important;
-            color: var(--sanzo-cream) !important;
-        }
-
-        /* FOOTER */
-        .footer {
-            background-color: var(--sanzo-blue) !important;
-            color: var(--sanzo-cream) !important;
-        }
-        .copyright {
-            background-color: #04384f !important;
-            color: var(--sanzo-cream) !important;
-        }
-
-        /* PRESENTATION BOX */
-        .presentation-box {
-            background-color: #fff;
-            border: 2px dashed var(--sanzo-blue);
-            padding: 3rem;
-            border-radius: 15px;
-            text-align: center;
-            margin-top: 4rem;
-        }
+        .footer { color: var(--sanzo-cream) !important; }
+        .report-text { font-size: 1.1rem; line-height: 1.8; text-align: justify; }
+        hr { border-top-color: var(--sanzo-blue) !important; opacity: 0.2; }
+        .table-custom { background-color: #fff; border: 2px solid var(--sanzo-blue); border-radius: 10px; overflow: hidden; margin-bottom: 3rem; margin-top: 2rem; box-shadow: 5px 5px 0px rgba(6, 79, 110, 0.1); }
+        .table-custom thead { background-color: var(--sanzo-blue); color: var(--sanzo-cream); }
+        .table-custom th, .table-custom td { border-color: #dee2e6; padding: 1rem; }
+        .table-caption { caption-side: top; font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--sanzo-blue); font-weight: bold; text-align: center; }
+        .btn { transition: all 0.3s ease-in-out !important; font-weight: 500; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .btn-outline-dark { color: var(--sanzo-blue) !important; border-color: var(--sanzo-blue) !important; }
+        .btn-outline-dark:hover { background-color: var(--sanzo-blue) !important; color: var(--sanzo-cream) !important; }
+        .presentation-box { background-color: #fff; border: 2px dashed var(--sanzo-blue); padding: 3rem; border-radius: 15px; text-align: center; margin-top: 4rem; }
     </style>
 </head>
 <body id="page-top">
-
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="../index.html">Kadir Cem Yilmaz</a>
-            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fas fa-bars"></i>
-            </button>
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../index.html#portfolio">Portfolio</a></li>
@@ -182,270 +56,75 @@
             </div>
         </div>
     </nav>
-
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
             <h1 class="masthead-heading text-uppercase mb-0">The Role of Game Industry in Japan's Public Diplomacy</h1>
-            <div class="divider-custom divider-light">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-globe-asia"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
+            <div class="divider-custom divider-light"><div class="divider-custom-line"></div><div class="divider-custom-icon"><i class="fas fa-globe-asia"></i></div><div class="divider-custom-line"></div></div>
             <p class="masthead-subheading font-weight-light mb-0">New Media and Public Relations Course Report</p>
             <p class="mt-2 fst-italic">Prepared by Kadir Cem Yilmaz</p>
         </div>
     </header>
-
     <section class="page-section">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10 report-text">
-
                     <div class="alert alert-light border-0 shadow-sm p-4 mb-5" style="background-color: rgba(255,255,255,0.6); border-left: 5px solid var(--sanzo-orange) !important;">
                         <h4 class="text-uppercase mb-3">Abstract</h4>
-                        <p class="mb-0">
-                            In 21st century diplomacy, public diplomacy stands out as an important tool. Since public diplomacy is shaped by the use of media based on modern technologies, the development of communication technologies also affects the forms of this type of diplomacy. Younger generations, as the fastest adopters of these technologies, are at the center of global cultural interactions. Today, the influence of popular culture is particularly evident in Japanese products such as anime, manga and video games. This study examines the role of the Japanese gaming industry in the context of soft power and considers the impact of these products on global diplomacy. Games such as Pokémon, Final Fantasy, and The Legend of Zelda have become an effective tool in international relations by introducing Japanese culture and innovation to millions of people around the world. Moreover, games such as Ghost of Tsushima have contributed to the spread of cultural heritage by combining samurai culture and Japanese history with modern gaming technologies.
-                        </p>
+                        <p class="mb-0">In 21st century diplomacy, public diplomacy stands out as an important tool. Since public diplomacy is shaped by the use of media based on modern technologies, the development of communication technologies also affects the forms of this type of diplomacy. This study examines the role of the Japanese gaming industry in the context of soft power and considers the impact of these products on global diplomacy.</p>
                         <p class="mt-2 small text-muted"><strong>Keywords:</strong> soft power, Japanese gaming industry, cultural diplomacy, Nintendo, Sony.</p>
                     </div>
-
                     <h3 class="mb-4">1. Introduction</h3>
                     <p>In 21st century global affairs, the concept of power is not just about military or economic pressure. Soft power, as defined by Joseph Nye, "It is the ability to get what you want through attraction" (Nye 2004, 10). "A country can achieve what it wants through admiration of other countries' values, emulation of their example, and envy of their openness," Nye explains (Nye 2004, 5).</p>
                     <p>Japan's video game industry provides a modern example of this concept. With its cultural heritage and technological innovations, Japan has influenced millions of people around the world and has become a global center of attraction. The Japanese gaming industry is not only an economic success story, but also one of the most influential elements of Japan's soft power. Game franchises such as Pokémon and Mario have become global phenomena, while Final Fantasy, Legend of Zelda, and others have demonstrated Japan's mastery of storytelling.</p>
                     <p>As Nye emphasizes, soft power is the ability to get others to want the outcomes you want. Japan's gaming industry has effectively applied this approach, enhancing the country's reputation internationally. In addition, Japan's strategic efforts, such as the "Cool Japan" initiative, have positioned the gaming industry as a tool for global diplomacy. Through this initiative, Japan has not only achieved economic gains, but has also succeeded in bringing its cultural heritage to the world stage. However, Japan's success is not unlimited. Historical tensions, especially in East Asia, and Japan's inward-looking social structure are among the factors limiting the potential of this soft power.</p>
                     <p>This essay will examine the role of the Japanese gaming industry in Soft Power diplomacy, discuss the impact of the "Cool Japan" initiative, and examine how this industry acts as a bridge in global cultural relations. It will also assess the challenges facing Japan and potential strategies to overcome these challenges. Understanding the impact of Japanese gaming in both the economic and diplomatic spheres is critical to understanding the place of soft power in the modern world.</p>
-
                     <hr class="my-5">
-
                     <h3 class="mb-4">2. Soft Power and Cultural Exports</h3>
                     <p>Soft power refers to the influence of a country that stems not only from its military or economic strength, but also from its cultural appeal. Japan has used its soft power effectively on the global stage, particularly through cultural products such as video games. These products have promoted Japan's cultural heritage to millions of people around the world, creating a positive national image.</p>
                     <p>Japan's cultural exports are an important source of its soft power. Game series such as Pokémon, Final Fantasy and Super Mario have not only provided entertainment, but also reflected Japan's cultural values and aesthetic sense. These games have built a large fan base around the world, strengthening Japan's soft power. The Pokémon series, for example, has been released in more than 50 countries and has generated billions of dollars in revenue worldwide.</p>
-
-                    <div class="table-responsive table-custom">
-                        <table class="table table-hover mb-0">
-                            <caption class="table-caption">Table 1: Estimated All-Time Revenue of Valuable Media Franchises (Billion $) (Statista 2021)</caption>
-                            <thead>
-                                <tr>
-                                    <th>Franchise</th>
-                                    <th>Year</th>
-                                    <th>Revenue (Billion $)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>Pokémon</td><td>1996</td><td>100.0</td></tr>
-                                <tr><td>Hello Kitty</td><td>1974</td><td>84.5</td></tr>
-                                <tr><td>Winnie the Pooh</td><td>1924</td><td>80.3</td></tr>
-                                <tr><td>Mickey Mouse</td><td>1928</td><td>80.3</td></tr>
-                                <tr><td>Star Wars</td><td>1977</td><td>68.7</td></tr>
-                                <tr><td>Disney Princess</td><td>2000</td><td>46.4</td></tr>
-                                <tr><td>Anpanman</td><td>1973</td><td>44.9</td></tr>
-                                <tr><td>Marvel Cinematic Universe</td><td>2008</td><td>35.3</td></tr>
-                                <tr><td>Super Mario</td><td>1981</td><td>34.6</td></tr>
-                                <tr><td>Harry Potter</td><td>1997</td><td>32.2</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-
+                    <div class="table-responsive table-custom"><table class="table table-hover mb-0"><caption class="table-caption">Table 1: Estimated All-Time Revenue of Valuable Media Franchises (Billion $) (Statista 2021)</caption><thead><tr><th>Franchise</th><th>Year</th><th>Revenue (Billion $)</th></tr></thead><tbody><tr><td>Pokémon</td><td>1996</td><td>100.0</td></tr><tr><td>Hello Kitty</td><td>1974</td><td>84.5</td></tr><tr><td>Winnie the Pooh</td><td>1924</td><td>80.3</td></tr><tr><td>Mickey Mouse</td><td>1928</td><td>80.3</td></tr><tr><td>Star Wars</td><td>1977</td><td>68.7</td></tr><tr><td>Disney Princess</td><td>2000</td><td>46.4</td></tr><tr><td>Anpanman</td><td>1973</td><td>44.9</td></tr><tr><td>Marvel Cinematic Universe</td><td>2008</td><td>35.3</td></tr><tr><td>Super Mario</td><td>1981</td><td>34.6</td></tr><tr><td>Harry Potter</td><td>1997</td><td>32.2</td></tr></tbody></table></div>
                     <p>Video games are an important example of how Japan has created an effective source of soft power through trade. The international success of these games has not only generated economic gains, but also increased Japan's cultural appeal. Younger generations in particular have learned about Japan's values, storytelling and aesthetics through Japanese games. This process demonstrates that cultural products are not only consumer goods, but also effective tools in international relations.</p>
                     <p>The global success of Japanese video games has a significant impact on Japan's image internationally. Cultural products have created a bond between peoples and strengthened Japan's international image. As Nye notes, soft power is about getting others to admire your values (Nye 2004, 5). Japanese games have increased people's interest in Japanese culture around the world, contributing to the perception of Japan as a modern and innovative country.</p>
                     <p>For example, series such as Final Fantasy, Yakuza and Persona have showcased the creative aspects of Japanese culture with their complex storytelling and impressive visuals. These games have reached a large fan base not only in Japan but also in Western countries. This is a clear indication of how Japan pursues a soft power strategy through its cultural products.</p>
                     <p>Japan's success through trade is an important factor supporting its soft power. For example, products such as Sony's PlayStation have become not only commercial successes but also symbols of Japanese technology and innovation. These products show how Japan is a leader in the global market. Moreover, these game consoles have served as a vehicle for representing Japan's technological superiority and design sense around the world.</p>
                     <p>Japanese video games have created a cultural bridge between peoples by creating a bond between players. These games have become more than just products from Japan; they have also helped people to become more familiar with Japanese culture. For example, games such as The Legend of Zelda have allowed players to connect with Japanese culture by presenting themes that incorporate Japanese mythology and aesthetics. Such games have increased public interest in Japanese culture and strengthened Japan's reputation internationally.</p>
-
                     <hr class="my-5">
-
                     <h3 class="mb-4">3. Cool Japan Policy</h3>
                     <p>Japan's "Cool Japan" policy was launched as an official initiative in the early 2010s. Under this policy, Japan's Ministry of Economy, Trade and Industry (METI) aimed to increase Japan's cultural exports and strengthen the country's soft power through these exports. Video games, anime, fashion, cuisine and other cultural products were at the center of this strategy. According to METI's foresight, culture-related industries constitute a growing segment of Japan's economy and are gaining broad appeal around the world (METI 2025).</p>
-                    
-                    <div class="table-responsive table-custom">
-                        <table class="table table-hover mb-0">
-                            <caption class="table-caption">Table 2: Trends in Visitor Arrivals to Japan (Selected Years)</caption>
-                            <thead>
-                                <tr>
-                                    <th>Year</th>
-                                    <th>Approx. Visitors</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>2011</td><td>~6,000,000</td></tr>
-                                <tr><td>2013</td><td>~10,000,000</td></tr>
-                                <tr><td>2015</td><td>~20,000,000</td></tr>
-                                <tr><td>2017</td><td>~28,000,000</td></tr>
-                                <tr><td>2019</td><td>~31,000,000</td></tr>
-                                <tr><td>2023 (Jan-Jul)</td><td>~13,000,000</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-
+                    <div class="table-responsive table-custom"><table class="table table-hover mb-0"><caption class="table-caption">Table 2: Trends in Visitor Arrivals to Japan (Selected Years)</caption><thead><tr><th>Year</th><th>Approx. Visitors</th></tr></thead><tbody><tr><td>2011</td><td>~6,000,000</td></tr><tr><td>2013</td><td>~10,000,000</td></tr><tr><td>2015</td><td>~20,000,000</td></tr><tr><td>2017</td><td>~28,000,000</td></tr><tr><td>2019</td><td>~31,000,000</td></tr><tr><td>2023 (Jan-Jul)</td><td>~13,000,000</td></tr></tbody></table></div>
                     <p>The Cool Japan policy has played a decisive role in Japan's soft power strategy. As Nissim notes, Japan's popular culture has served globally not only as a means of entertainment but also as a diplomatic tool (Nissim 2008). The Pokémon series, for example, not only provided entertainment, but also reinforced Japan's innovative and modern image around the world (Hatakeyama and Kubo 2000).</p>
                     <p>This policy aimed to make Japan's cultural products more visible on the international stage and was largely successful. For example, products such as anime and video games have reached a wide audience around the world. Brands such as Pokémon, Naruto and Final Fantasy have represented the innovative and creative aspects of Japan internationally. In the process, Japan was perceived not only as a product provider but also as a cultural leader.</p>
                     <p>The Cool Japan policy not only increased Japan's economic influence in the international arena, but also made an important contribution as an instrument of cultural diplomacy. Japan's cultural products have connected people in different countries and contributed to the perception of Japan as a modern and creative country.</p>
-
                     <hr class="my-5">
-
                     <h3 class="mb-4">4. Global Dominance of the Japanese Gaming Industry</h3>
                     <p>The Japanese gaming industry provides one of the most powerful examples of how soft power can be used as an effective tool. This success story began with Nintendo's entry into the American market in the early 1980s. Launched in 1983, the Nintendo Entertainment System (NES) opened the doors to a new era in the video game industry. The NES was seen not only as a technological achievement, but also as a symbol of Japan's ability to produce innovative and quality products.</p>
                     <p>Following this success, the Game Boy, released in 1989, brought portable gaming to millions of gamers around the world and established Nintendo as a global brand. The fact that cult games such as Tetris could be played on this device contributed to the Game Boy selling 118 million units worldwide.</p>
-                    
-                    <div class="table-responsive table-custom">
-                        <table class="table table-hover mb-0">
-                            <caption class="table-caption">Table 3: Best-Selling Video Game Consoles of All Time (Top 5) (Sirani 2024)</caption>
-                            <thead>
-                                <tr>
-                                    <th>Rank</th>
-                                    <th>Platform</th>
-                                    <th>Firm</th>
-                                    <th>Units Sold</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>1</td><td>PlayStation 2</td><td>Sony</td><td>160 million</td></tr>
-                                <tr><td>2</td><td>Nintendo DS</td><td>Nintendo</td><td>154.02 million</td></tr>
-                                <tr><td>3</td><td>Nintendo Switch</td><td>Nintendo</td><td>146.04 million</td></tr>
-                                <tr><td>4</td><td>Game Boy/Color</td><td>Nintendo</td><td>118.69 million</td></tr>
-                                <tr><td>5</td><td>PlayStation 4</td><td>Sony</td><td>117.2 million</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-
+                    <div class="table-responsive table-custom"><table class="table table-hover mb-0"><caption class="table-caption">Table 3: Best-Selling Video Game Consoles of All Time (Top 5) (Sirani 2024)</caption><thead><tr><th>Rank</th><th>Platform</th><th>Firm</th><th>Units Sold</th></tr></thead><tbody><tr><td>1</td><td>PlayStation 2</td><td>Sony</td><td>160 million</td></tr><tr><td>2</td><td>Nintendo DS</td><td>Nintendo</td><td>154.02 million</td></tr><tr><td>3</td><td>Nintendo Switch</td><td>Nintendo</td><td>146.04 million</td></tr><tr><td>4</td><td>Game Boy/Color</td><td>Nintendo</td><td>118.69 million</td></tr><tr><td>5</td><td>PlayStation 4</td><td>Sony</td><td>117.2 million</td></tr></tbody></table></div>
                     <p>In 1994, Sony took Japan's leadership in the gaming industry one step further with the launch of the PlayStation console. With its CD-based gaming technology and powerful hardware, the PlayStation took the gaming experience to the next level and cemented Japan's leadership not only in the entertainment industry but also in technology. The PlayStation 2, launched in the 2000s, became the best-selling game console of all time, selling over 155 million units worldwide. This success once again demonstrated the superiority and innovation of Japanese technology on the global stage.</p>
-
-                    <div class="table-responsive table-custom">
-                        <table class="table table-hover mb-0">
-                            <caption class="table-caption">Table 4: Cumulative Worldwide Hardware Unit Sales (Sony) (Sony Interactive Entertainment 2025)</caption>
-                            <thead>
-                                <tr>
-                                    <th>Console</th>
-                                    <th>Units Sold</th>
-                                    <th>Date</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>PlayStation 2</td><td>> 160.0 million</td><td>Mar 31, 2012</td></tr>
-                                <tr><td>PlayStation 4</td><td>> 117 million</td><td>Jun 30, 2022</td></tr>
-                                <tr><td>PlayStation</td><td>> 102.4 million</td><td>Mar 31, 2012</td></tr>
-                                <tr><td>PlayStation 3</td><td>> 87.4 million</td><td>Mar 31, 2017</td></tr>
-                                <tr><td>PlayStation 5</td><td>> 65 million</td><td>Sept 30, 2024</td></tr>
-                                <tr><td>PSP (Portable)</td><td>> 76.4 million</td><td>Mar 31, 2012</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-
+                    <div class="table-responsive table-custom"><table class="table table-hover mb-0"><caption class="table-caption">Table 4: Cumulative Worldwide Hardware Unit Sales (Sony) (Sony Interactive Entertainment 2025)</caption><thead><tr><th>Console</th><th>Units Sold</th><th>Date</th></tr></thead><tbody><tr><td>PlayStation 2</td><td>> 160.0 million</td><td>Mar 31, 2012</td></tr><tr><td>PlayStation 4</td><td>> 117 million</td><td>Jun 30, 2022</td></tr><tr><td>PlayStation</td><td>> 102.4 million</td><td>Mar 31, 2012</td></tr><tr><td>PlayStation 3</td><td>> 87.4 million</td><td>Mar 31, 2017</td></tr><tr><td>PlayStation 5</td><td>> 65 million</td><td>Sept 30, 2024</td></tr><tr><td>PSP (Portable)</td><td>> 76.4 million</td><td>Mar 31, 2012</td></tr></tbody></table></div>
                     <p>According to data published by the CESA Games White Paper in 2014, global sales of the home console market in 2013 amounted to 3,231,740 million yen. The graph clearly shows the sales ratios of the domestic and overseas market. In Japan, hardware sales accounted for 4.8% and software sales accounted for 7.8% of the total, while overseas sales were 34.6% (hardware) and 52.8% (software), respectively. The influence of the Japanese gaming industry on a global scale is particularly evident in software exports. Accounting for 87.3% of the overseas market, this clearly shows how popular Japanese games are worldwide". This data emphasizes the leadership and influence of the Japanese gaming industry in the global gaming market (CESA 2014).</p>
-
-                    <div class="table-responsive table-custom">
-                        <table class="table table-hover mb-0">
-                            <caption class="table-caption">Table 5: Scale of the Home Console Market (2013) (Million Yen) (CESA 2014)</caption>
-                            <thead>
-                                <tr>
-                                    <th>Category</th>
-                                    <th>Domestic Sales</th>
-                                    <th>Overseas Sales</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>Hardware</td><td>155,804 (4.8%)</td><td>1,117,212 (34.6%)</td></tr>
-                                <tr><td>Software</td><td>253,691 (7.8%)</td><td>1,705,033 (52.8%)</td></tr>
-                                <tr class="fw-bold"><td>Total Sales</td><td>409,495</td><td>2,822,245</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-
+                    <div class="table-responsive table-custom"><table class="table table-hover mb-0"><caption class="table-caption">Table 5: Scale of the Home Console Market (2013) (Million Yen) (CESA 2014)</caption><thead><tr><th>Category</th><th>Domestic Sales</th><th>Overseas Sales</th></tr></thead><tbody><tr><td>Hardware</td><td>155,804 (4.8%)</td><td>1,117,212 (34.6%)</td></tr><tr><td>Software</td><td>253,691 (7.8%)</td><td>1,705,033 (52.8%)</td></tr><tr class="fw-bold"><td>Total Sales</td><td>409,495</td><td>2,822,245</td></tr></tbody></table></div>
                     <p>Nintendo and Sony have become recognized brands not only in the gaming world, but also in the global business world. Named one of the "100 Most Valuable Companies in the World" by Forbes in 2020, these two Japanese giants are respected around the world for their innovation and quality products. Nintendo's cult franchises such as The Legend of Zelda, Pokémon and Super Mario have left a deep mark not only in the gaming world but also in popular culture. Similarly, Sony's PlayStation brand has redefined the gaming experience by supporting an ecosystem of technological innovation.</p>
-
-                    <div class="table-responsive table-custom">
-                        <table class="table table-hover mb-0">
-                            <caption class="table-caption">Table 6: Forbes Top Digital Gaming Companies (Financials) (Forbes 2023)</caption>
-                            <thead>
-                                <tr>
-                                    <th>Rank</th>
-                                    <th>Company</th>
-                                    <th>Sales</th>
-                                    <th>Profit</th>
-                                    <th>Assets</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>#47</td><td>Sony</td><td>$13.3 B</td><td>$3.3 B</td><td>$63 B</td></tr>
-                                <tr><td>#87</td><td>Nintendo</td><td>$8.8 B</td><td>$6.6 B</td><td>$11.8 B</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-
+                    <div class="table-responsive table-custom"><table class="table table-hover mb-0"><caption class="table-caption">Table 6: Forbes Top Digital Gaming Companies (Financials) (Forbes 2023)</caption><thead><tr><th>Rank</th><th>Company</th><th>Sales</th><th>Profit</th><th>Assets</th></tr></thead><tbody><tr><td>#47</td><td>Sony</td><td>$13.3 B</td><td>$3.3 B</td><td>$63 B</td></tr><tr><td>#87</td><td>Nintendo</td><td>$8.8 B</td><td>$6.6 B</td><td>$11.8 B</td></tr></tbody></table></div>
                     <p>The Japanese gaming industry is notable not only for its technological achievements, but also for its artistic and cultural impact. For example, The Legend of Zelda: Breath of the Wild won the Game of the Year award in 2017, earning high praise from gamers and critics alike. The game redefined industry standards with its open-world design and creative gameplay mechanics. Also in 2019, Sekiro: Shadows Die Twice won Game of the Year in 2019, once again demonstrating Japan's leadership in storytelling and game design.</p>
-
-                    <div class="table-responsive table-custom">
-                        <table class="table table-hover mb-0">
-                            <caption class="table-caption">Table 7: Selected Game of the Year Winners</caption>
-                            <thead>
-                                <tr>
-                                    <th>Year</th>
-                                    <th>Game</th>
-                                    <th>Developer</th>
-                                    <th>Genre</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>2017</td><td>The Legend of Zelda: BotW</td><td>Nintendo EPD</td><td>Action-adventure</td></tr>
-                                <tr><td>2018</td><td>God of War</td><td>Santa Monica Studio</td><td>Action-adventure</td></tr>
-                                <tr><td>2019</td><td>Sekiro: Shadows Die Twice</td><td>FromSoftware</td><td>Action-adventure</td></tr>
-                                <tr><td>2020</td><td>The Last of Us Part II</td><td>Naughty Dog</td><td>Action-adventure</td></tr>
-                                <tr><td>2021</td><td>It Takes Two</td><td>Hazelight Studios</td><td>Action-adventure</td></tr>
-                                <tr><td>2022</td><td>Elden Ring</td><td>FromSoftware</td><td>Action RPG</td></tr>
-                                <tr><td>2023</td><td>Baldur's Gate 3</td><td>Larian Studios</td><td>RPG</td></tr>
-                                <tr><td>2024</td><td>Astro Bot</td><td>Team Asobi</td><td>Platformer</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-
+                    <div class="table-responsive table-custom"><table class="table table-hover mb-0"><caption class="table-caption">Table 7: Selected Game of the Year Winners</caption><thead><tr><th>Year</th><th>Game</th><th>Developer</th><th>Genre</th></tr></thead><tbody><tr><td>2017</td><td>The Legend of Zelda: BotW</td><td>Nintendo EPD</td><td>Action-adventure</td></tr><tr><td>2018</td><td>God of War</td><td>Santa Monica Studio</td><td>Action-adventure</td></tr><tr><td>2019</td><td>Sekiro: Shadows Die Twice</td><td>FromSoftware</td><td>Action-adventure</td></tr><tr><td>2020</td><td>The Last of Us Part II</td><td>Naughty Dog</td><td>Action-adventure</td></tr><tr><td>2021</td><td>It Takes Two</td><td>Hazelight Studios</td><td>Action-adventure</td></tr><tr><td>2022</td><td>Elden Ring</td><td>FromSoftware</td><td>Action RPG</td></tr><tr><td>2023</td><td>Baldur's Gate 3</td><td>Larian Studios</td><td>RPG</td></tr><tr><td>2024</td><td>Astro Bot</td><td>Team Asobi</td><td>Platformer</td></tr></tbody></table></div>
                     <p>Games like Ghost of Tsushima or Rise of the Ronin, which explores samurai culture and Japanese history, have played an important role in introducing Japan's cultural heritage to international players. Such games combine Japanese aesthetics with modern technologies to provide players with a fun and educational experience.</p>
-
                     <hr class="my-5">
-
                     <h3 class="mb-4">5. Conclusion</h3>
                     <p>Japan's gaming industry is one of the most powerful examples of how soft power can be an effective tool in the modern world. The innovative approaches of companies like Nintendo and Sony have not only reinforced Japan's economic success, but also deepened the country's cultural influence internationally. Games such as The Legend of Zelda and Pokémon have become cultural icons, enabling millions of gamers to familiarize themselves with Japanese aesthetics, storytelling and values.</p>
                     <p>Consoles such as the Game Boy and PlayStation, which have sold millions of units worldwide, have shown that Japan is not only a technology giant but also a culture producer. Nintendo and Sony, both listed in Forbes' "100 Most Valuable Companies in the World", are brands that symbolize Japan's leadership in this field. These companies have succeeded in building not only the gaming industry, but also cultural bridges in international relations.</p>
                     <p>The global impact of the Japanese gaming industry is not limited to economic benefits. Games such as Ghost of Tsushima have contributed to the preservation and dissemination of cultural heritage, promoting Japanese history and aesthetics. In addition, Sekiro: Shadows Die Twice and Breath of the Wild have once again proven Japan's mastery of storytelling and design.</p>
                     <p>In conclusion, the Japanese gaming industry is a perfect example to understand the power of soft power in the modern world. This industry has proven that cultural products can speak an international language, build ties between peoples and improve diplomatic relations. Through the gaming industry, Japan is not only a producer of culture, but also a cultural leader in the international arena. In the future, it is clear that the Japanese gaming industry will further consolidate its leadership in the field of soft power through innovative and effective solutions.</p>
-
                     <hr class="my-5">
-
                     <h3 class="mb-4 text-secondary">Bibliography</h3>
-                    <ul class="list-unstyled" style="font-size: 0.9rem;">
-                        <li class="mb-2">Nye, Joseph S. <em>Soft Power: The Means to Success in World Politics</em>. New York: PublicAffairs, 2004.</li>
-                        <li class="mb-2">Nissim, Kazuo. <em>Japan Imagined: Popular Culture, Soft Power, and Japan's Changing Image in Northeast and Southeast Asia</em>. 2008.</li>
-                        <li class="mb-2">Ministry of Economy, Trade, and Industry (METI). "Cool Japan Strategy." Accessed January, 2025.</li>
-                        <li class="mb-2">4Kids Entertainment. "Retail Report," June 13, 2001.</li>
-                        <li class="mb-2">Hatakeyama, Kenji, and Masakazu Kubo. <em>Pokemon Story</em>. Tokyo: Shogakukan, 2000.</li>
-                        <li class="mb-2">Forbes. "The Top 100 Digital Gaming Companies 2023."</li>
-                        <li class="mb-2">Nippon.com. "Japanese Gaming Industry: Leading the World with Innovation."</li>
-                    </ul>
-
-                    <div class="presentation-box mt-5 mb-5">
-                        <h4 class="text-uppercase mb-3"><i class="fas fa-file-powerpoint me-2"></i>Supplementary Material</h4>
-                        <p class="text-muted">View the visual presentation slides accompanying this report.</p>
-                        <a href="../assets/files/The Role of Game Industry in Japan's Public Diplomacy Presentetion.pdf" target="_blank" class="btn btn-xl btn-primary">
-                            <i class="fas fa-download me-2"></i> Download Presentation (PDF)
-                        </a>
-                    </div>
-
-                    <div class="text-center mt-5 mb-5">
-                        <a href="../blog.html" class="btn btn-xl btn-outline-dark">
-                            <i class="fas fa-arrow-left me-2"></i> Back to Blog List
-                        </a>
-                    </div>
-
+                    <ul class="list-unstyled" style="font-size: 0.9rem;"><li class="mb-2">Nye, Joseph S. <em>Soft Power: The Means to Success in World Politics</em>. New York: PublicAffairs, 2004.</li><li class="mb-2">Nissim, Kazuo. <em>Japan Imagined: Popular Culture, Soft Power, and Japan's Changing Image in Northeast and Southeast Asia</em>. 2008.</li><li class="mb-2">Ministry of Economy, Trade, and Industry (METI). "Cool Japan Strategy." Accessed January 24, 2025.</li><li class="mb-2">4Kids Entertainment. "Retail Report," June 13, 2001.</li><li class="mb-2">Hatakeyama, Kenji, and Masakazu Kubo. <em>Pokemon Story</em>. Tokyo: Shogakukan, December 10, 2000.</li><li class="mb-2">Forbes. "The Top 100 Digital Gaming Companies 2023." Forbes.com. Accessed January 24, 2025.</li><li class="mb-2">Nippon.com. "Japanese Gaming Industry: Leading the World with Innovation." Accessed January 24, 2025.</li></ul>
+                    <div class="presentation-box mt-5 mb-5"><h4 class="text-uppercase mb-3"><i class="fas fa-file-powerpoint me-2"></i>Supplementary Material</h4><p class="text-muted">View the visual presentation slides accompanying this report.</p><a href="../assets/files/The Role of Game Industry in Japan's Public Diplomacy Presentetion.pdf" target="_blank" class="btn btn-xl btn-primary"><i class="fas fa-download me-2"></i> Download Presentation (PDF)</a></div>
+                    <div class="text-center mt-5 mb-5"><a href="../blog.html" class="btn btn-xl btn-outline-dark"><i class="fas fa-arrow-left me-2"></i> Back to Blog List</a></div>
                 </div>
             </div>
         </div>
     </section>
-
-    <footer class="footer text-center">
-        <div class="container">
-            <small class="text-white">Copyright &copy; Kadir Cem Yilmaz 2025</small>
-        </div>
-    </footer>
-
+    <footer class="footer text-center"><div class="container"><small>Copyright &copy; Kadir Cem Yilmaz 2025</small></div></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

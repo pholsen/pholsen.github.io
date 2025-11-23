@@ -6,121 +6,51 @@
     <meta name="description" content="1980 Coup and Turkish Globalization" />
     <meta name="author" content="Kadir Cem Yilmaz" />
     <title>1980 Coup & Turkish Globalization - Kadir Cem Yilmaz</title>
-    
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
-    
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,600;0,700;1,700&family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
     <link href="../css/styles.css" rel="stylesheet" />
-    
     <style>
-        :root {
-            --sanzo-blue: #064f6e;
-            --sanzo-orange: #f99d1b;
-            --sanzo-cream: #f5ecc2;
-        }
-
-        body {
-            background-color: var(--sanzo-cream) !important;
-            color: var(--sanzo-blue) !important;
-            font-family: 'Rubik', sans-serif !important;
-        }
-
-        h1, h2, h3, h4, h5, h6, .navbar-brand, .masthead-heading, .card-title, caption {
-            font-family: 'Kanit', sans-serif !important;
-            font-weight: 700; 
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            color: var(--sanzo-blue) !important;
-        }
-
-        #mainNav, .footer { background-color: var(--sanzo-blue) !important; }
+        :root { --sanzo-blue: #064f6e; --sanzo-orange: #f99d1b; --sanzo-cream: #f5ecc2; }
+        body { background-color: var(--sanzo-cream) !important; color: var(--sanzo-blue) !important; font-family: 'Rubik', sans-serif !important; }
+        h1, h2, h3, h4, h5, h6, .navbar-brand, .masthead-heading, .card-title, caption { font-family: 'Kanit', sans-serif !important; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--sanzo-blue) !important; }
+        
+        /* NAVBAR FIX */
+        #mainNav { background-color: var(--sanzo-blue) !important; padding-top: 1rem; padding-bottom: 1rem; }
+        #mainNav .navbar-brand { color: var(--sanzo-cream) !important; } /* İsim Rengi Düzeltildi */
         #mainNav .nav-link { color: var(--sanzo-cream) !important; font-weight: 500; }
         #mainNav .nav-link.active, #mainNav .nav-link:hover { color: var(--sanzo-orange) !important; }
-        .footer { color: var(--sanzo-cream) !important; }
-        .copyright { background-color: #04384f !important; color: var(--sanzo-cream) !important; }
-
-        header.masthead {
-            background-color: var(--sanzo-blue) !important;
-            padding-top: 11rem !important; 
-            padding-bottom: 6rem !important;
-            color: var(--sanzo-cream) !important;
-        }
+        
+        /* HEADER FIX */
+        header.masthead { background-color: var(--sanzo-blue) !important; padding-top: 11rem !important; padding-bottom: 6rem !important; color: var(--sanzo-cream) !important; }
         .masthead-heading, .masthead-subheading, .text-white, .mt-2 { color: var(--sanzo-cream) !important; }
         .divider-light .divider-custom-line { background-color: var(--sanzo-cream) !important; }
         .divider-light .divider-custom-icon { color: var(--sanzo-orange) !important; }
 
-        .report-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            text-align: justify;
-        }
-        
+        .footer { color: var(--sanzo-cream) !important; }
+        .report-text { font-size: 1.1rem; line-height: 1.8; text-align: justify; }
         hr { border-top-color: var(--sanzo-blue) !important; opacity: 0.2; }
-
         figure { margin: 2.5rem 0; text-align: center; }
-        figure img {
-            border: 3px solid var(--sanzo-blue);
-            border-radius: 10px;
-            box-shadow: 5px 5px 0px var(--sanzo-orange);
-            max-width: 100%;
-            height: auto;
-        }
-        figcaption {
-            margin-top: 0.8rem;
-            font-size: 0.95rem;
-            font-style: italic;
-            color: var(--sanzo-blue);
-            font-weight: 500;
-        }
-
-        .table-custom {
-            background-color: #fff;
-            border: 2px solid var(--sanzo-blue);
-            border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 3rem;
-            margin-top: 2rem;
-            box-shadow: 5px 5px 0px rgba(6, 79, 110, 0.1);
-        }
+        figure img { border: 3px solid var(--sanzo-blue); border-radius: 10px; box-shadow: 5px 5px 0px var(--sanzo-orange); max-width: 100%; height: auto; }
+        figcaption { margin-top: 0.8rem; font-size: 0.95rem; font-style: italic; color: var(--sanzo-blue); font-weight: 500; }
+        .table-custom { background-color: #fff; border: 2px solid var(--sanzo-blue); border-radius: 10px; overflow: hidden; margin-bottom: 3rem; margin-top: 2rem; box-shadow: 5px 5px 0px rgba(6, 79, 110, 0.1); }
         .table-custom thead { background-color: var(--sanzo-blue); color: var(--sanzo-cream); }
         .table-custom th, .table-custom td { border-color: #dee2e6; padding: 1rem; }
-        .table-caption {
-            caption-side: top;
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            color: var(--sanzo-blue);
-            font-weight: bold;
-            text-align: center;
-        }
-
+        .table-caption { caption-side: top; font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--sanzo-blue); font-weight: bold; text-align: center; }
         .btn { transition: all 0.3s ease-in-out !important; font-weight: 500; }
         .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
         .btn-outline-dark { color: var(--sanzo-blue) !important; border-color: var(--sanzo-blue) !important; }
         .btn-outline-dark:hover { background-color: var(--sanzo-blue) !important; color: var(--sanzo-cream) !important; }
-        
-        .presentation-box {
-            background-color: #fff;
-            border: 2px dashed var(--sanzo-blue);
-            padding: 3rem;
-            border-radius: 15px;
-            text-align: center;
-            margin-top: 4rem;
-        }
+        .presentation-box { background-color: #fff; border: 2px dashed var(--sanzo-blue); padding: 3rem; border-radius: 15px; text-align: center; margin-top: 4rem; }
     </style>
 </head>
 <body id="page-top">
-
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="../index.html">Kadir Cem Yilmaz</a>
-            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu <i class="fas fa-bars"></i>
-            </button>
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../index.html#portfolio">Portfolio</a></li>
@@ -129,181 +59,64 @@
             </div>
         </div>
     </nav>
-
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
             <h1 class="masthead-heading text-uppercase mb-0">1980 Coup and Turkish Globalization</h1>
-            <div class="divider-custom divider-light">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-landmark"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
+            <div class="divider-custom divider-light"><div class="divider-custom-line"></div><div class="divider-custom-icon"><i class="fas fa-landmark"></i></div><div class="divider-custom-line"></div></div>
             <p class="masthead-subheading font-weight-light mb-0">Globalization and Glocalization Course Report</p>
             <p class="mt-2 fst-italic">31/05/2025 | Kadir Cem Yilmaz</p>
         </div>
     </header>
-
     <section class="page-section">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10 report-text">
-
                     <h3 class="mb-4">Before Coup</h3>
                     <p>The 1970s was a period of great crisis for Turkey, both economically and socially. The industrialization model based on import substitution was seriously blocked in this period, foreign debts became unpayable and industrial production slowed down due to energy crises. Especially after 1977, high inflation, foreign exchange bottlenecks and rising unemployment bankrupted the economic system (Boratav et al. 2001).</p>
-                    
                     <p>The remittances sent by workers in Europe, which had temporarily alleviated this crisis, began to decline in 1979; migration to cities increased, but infrastructure and employment opportunities remained inadequate (Öniş 2004). In politics, successive coalition governments created instability in the administration and the state's decision-making and implementation capacity was greatly weakened (Ahmad 1993).</p>
-                    
                     <p>In the same period, the right-left polarization sharpened, street clashes and political murders became a part of daily life. In 1980, more than 1000 people were reportedly killed for political reasons. In this process, the security bureaucracy and the police force became ideologically divided and the state authority moved away from ensuring social security.</p>
-                    
                     <p>The most remarkable transformation in the social structure was seen in the youth, with university students becoming massively politicized and engaging in organized movements (Kırkpınar 2022). At the same time, trade union movements, especially under the leadership of DISK, made the class struggle visible on the streets with strikes and work stoppages. In the cultural sphere, arabesque music, Yeşilçam cinema and slum culture transformed urban aesthetics and identities with the impact of rural-urban migration, and this transformation was shaped through popular culture.</p>
-                    
                     <p>In the same period, the media was heavily under state control as TRT was the only channel, but the ideological conflict was also reflected in the press (Kırkgöz 2009).</p>
-
-                    <figure>
-                        <img src="../assets/img/0.png" alt="New enrolments in all higher education institutions in Turkey from 1965 to 1990" class="img-fluid">
-                        <figcaption>Figure 1: New enrolments in all higher education institutions in Turkey from 1965 to 1990.</figcaption>
-                    </figure>
-
+                    <figure><img src="../assets/img/0.png" alt="New enrolments in all higher education institutions in Turkey from 1965 to 1990" class="img-fluid"><figcaption>Figure 1: New enrolments in all higher education institutions in Turkey from 1965 to 1990.</figcaption></figure>
                     <p>All these socioeconomic, political and cultural fractures indicate that the social structure was fragmented, fragile and radicalized before the coup. The September 12, 1980 coup d'état was legitimized with the promise of "systematizing" this chaos and did not encounter any serious resistance from the society.</p>
-
+                    <div class="table-responsive table-custom"><table class="table table-hover mb-0"><caption class="table-caption">Table: Macroeconomic Performance of Turkey During the 1970s</caption><thead><tr><th>Year</th><th>Real GDP Growth (%)</th><th>Inflation Rate (%)</th><th>Investment (% of GDP)</th></tr></thead><tbody><tr><td>1972</td><td>6.0</td><td>18.0</td><td>20.1</td></tr><tr><td>1973</td><td>4.1</td><td>20.5</td><td>18.1</td></tr><tr><td>1974</td><td>8.8</td><td>29.9</td><td>20.7</td></tr><tr><td>1975</td><td>8.9</td><td>10.1</td><td>22.5</td></tr><tr><td>1976</td><td>8.9</td><td>15.6</td><td>24.7</td></tr><tr><td>1977</td><td>4.9</td><td>24.1</td><td>25.0</td></tr><tr><td>1978</td><td>4.3</td><td>52.6</td><td>18.5</td></tr><tr><td>1979</td><td>-0.6</td><td>63.9</td><td>18.3</td></tr><tr><td>1980</td><td>-1.0</td><td>107.2</td><td>21.4</td></tr></tbody></table></div>
                     <hr class="my-5">
-
                     <h3 class="mb-4">Kenan Evren and During Coup</h3>
                     <p>On the morning of September 12, 1980, Turkey woke up to the National Security Council (MGK) regime under the leadership of General Kenan Evren, Chief of General Staff. The intervention was presented to the public on the grounds of "stopping the fratricidal strife and anarchy in the country" (Ahmad 1993). In his first statement following the coup, Kenan Evren legitimized the intervention as an inevitable solution by stating that "the army seized power to prevent fratricidal strife".</p>
-                    
                     <p>In the first phase, the MGK shut down all political parties, lifted parliamentary immunity and suspended the constitution in force. These authoritarian interventions can be considered as the regime's attempt to realize its claim of ensuring stability by going beyond the law. In addition, 650,000 people were detained, 230,000 people were prosecuted, 1,683,000 people were labeled and 171 people died as a result of torture according to official statements (DW Türkçe 2019).</p>
-
-                    <figure>
-                        <img src="../assets/img/1.png" alt="Press Repression After the 1980 Coup in Turkey" class="img-fluid">
-                        <figcaption>Chart: Press Repression Statistics After the 1980 Coup in Turkey.</figcaption>
-                    </figure>
-
+                    <figure><img src="../assets/img/1.png" alt="Press Repression After the 1980 Coup in Turkey" class="img-fluid"><figcaption>Chart: Press Repression Statistics After the 1980 Coup in Turkey.</figcaption></figure>
                     <p>The ideological aspect of the military regime was shaped through a "centralized and controlled understanding of Kemalism". Kenan Evren said, "We are Kemalists. Fascism and communism are both against Kemalism. Our view is the national view, Atatürk's view" (Evren 1990) and presented a framework that rejected both right-wing and left-wing ideologies.</p>
-                    
                     <p>Adopted in 1982 by referendum, the new constitution greatly strengthened the executive branch and severely restricted fundamental rights and freedoms. This constitution institutionalized the "strong state, weak society" approach and aimed to withdraw society from the political sphere. The Higher Education Council (YÖK) was established in universities, media and civil society activities were tightly controlled, and society was attempted to be politically neutralized.</p>
-
                     <hr class="my-5">
-
                     <h3 class="mb-4">Turgut Özal Architect of Liberalism</h3>
-                    
                     <p>Turgut Özal was born in Malatya on October 13, 1927. Coming from a middle-class civil servant family, Özal pursued a successful education from primary school onwards. After graduating from Istanbul Technical University's Department of Electrical Engineering, he received a state scholarship to study engineering and economics in the United States. Here he became acquainted with the free market economy and development models; this experience was decisive in his intellectual background (Öniş 2004).</p>
-                    
                     <p>After returning to Turkey, he worked at the State Planning Organization (SPO) and the World Bank. In the 1970s, he also worked in various positions in the private sector, gaining extensive experience in both bureaucracy and the market mechanism. In 1979, Özal served as Undersecretary of the Prime Ministry in the Justice Party government and played a leading role in the preparation of the January 24, 1980 decisions. These decisions marked the milestone of Turkey's transition from import substitution to an export-oriented free market model (Boratav et al. 2001).</p>
-
-                    <figure>
-                        <img src="../assets/img/2.png" alt="Economic Indicators - Transition Period" class="img-fluid">
-                        <figcaption>Table: Economic Indicators during the Transition Period (1981-1997).</figcaption>
-                    </figure>
-
+                    <figure><img src="../assets/img/2.png" alt="Economic Indicators - Transition Period" class="img-fluid"><figcaption>Table: Economic Indicators during the Transition Period (1981-1997).</figcaption></figure>
                     <p>Turgut Özal's personality is characterized by pragmatic, innovative and conciliatory aspects. He tried to synthesize Western-type economic liberalism with a conservative-religious social structure. This synthesis would also be called "Islamic neoliberalism" in the post-1980 period (Tuğal 2002). Özal succeeded in appealing to both conservative and urban middle class voters as a political actor who was not distant from religious values but at the same time a modernizing political actor. In 1983, he founded the Motherland Party (ANAP), won the elections and became a political leader that marked the new era of Turkey.</p>
-                    
                     <p>Turgut Özal is considered one of the institutional architects of the privatization process in Turkey. In line with the neoliberal wave that swept across the globe in the 1980s, he aimed to reduce the direct role of the state in the economic sphere and emphasize the private sector. Although privatization revenues under Özal were relatively low - for example, only 2 million dollars between 1986-1987 and 150 million dollars between 1987-1989 - the steps taken during this period created the legal and institutional infrastructure that would pave the way for large-scale privatizations in the following years. Özal frequently advocated the view that "the state should be a regulator, not a merchant" and saw State Economic Enterprises as a source of inefficiency and waste (Öniş 2004).</p>
-
-                    <div class="table-responsive table-custom">
-                        <table class="table table-hover mb-0">
-                            <caption class="table-caption">Table: Privatization Revenues by Government Periods (1986-2011)</caption>
-                            <thead>
-                                <tr>
-                                    <th>Period</th>
-                                    <th>Government / Cabinet</th>
-                                    <th>Privatization Revenue (Million USD)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>1986-1987</td><td>1st ANAP Government / 45th Cabinet</td><td>2</td></tr>
-                                <tr><td>1987-1989</td><td>2nd ANAP Government / 46th Cabinet</td><td>150</td></tr>
-                                <tr><td>1989-1991</td><td>3rd ANAP Government / 47th Cabinet</td><td>695</td></tr>
-                                <tr><td>1991</td><td>4th ANAP Government / 48th Cabinet</td><td>43</td></tr>
-                                <tr><td>1991-1993</td><td>DYP-SHP Coalition / 49th Cabinet</td><td>827</td></tr>
-                                <tr><td>1993-1995</td><td>50th Cabinet DYP-SHP/CHP Coalition</td><td>1,008</td></tr>
-                                <tr><td>1995</td><td>51st Cabinet DYP Government</td><td>125</td></tr>
-                                <tr><td>1995-1996</td><td>DYP-CHP Coalition / 52nd Cabinet</td><td>68</td></tr>
-                                <tr><td>1996 (1)</td><td>ANAP-DYP Coalition / 53rd Cabinet</td><td>230</td></tr>
-                                <tr><td>1996-1997</td><td>RP-DYP Coalition / 54th Cabinet</td><td>357</td></tr>
-                                <tr><td>1997-1999</td><td>ANAP-DSP-DTP Coalition / 55th Cabinet</td><td>1,137</td></tr>
-                                <tr><td>1999 (1)</td><td>DSP Government / 56th Cabinet</td><td>18</td></tr>
-                                <tr><td>1999-2002</td><td>DSP-MHP-ANAP Coalition / 57th Cabinet</td><td>3,375</td></tr>
-                                <tr><td>2002-2003</td><td>1st AKP Government / 58th Cabinet</td><td>21</td></tr>
-                                <tr><td>2003-2007</td><td>2nd AKP Government / 59th Cabinet</td><td>21,927</td></tr>
-                                <tr><td>2007-2011</td><td>3rd AKP Government / 60th Cabinet</td><td>11,988</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-
+                    <div class="table-responsive table-custom"><table class="table table-hover mb-0"><caption class="table-caption">Table: Privatization Revenues by Government Periods (1986-2011)</caption><thead><tr><th>Period</th><th>Government / Cabinet</th><th>Privatization Revenue (Million USD)</th></tr></thead><tbody><tr><td>1986-1987</td><td>1st ANAP Government / 45th Cabinet</td><td>2</td></tr><tr><td>1987-1989</td><td>2nd ANAP Government / 46th Cabinet</td><td>150</td></tr><tr><td>1989-1991</td><td>3rd ANAP Government / 47th Cabinet</td><td>695</td></tr><tr><td>1991</td><td>4th ANAP Government / 48th Cabinet</td><td>43</td></tr><tr><td>1991-1993</td><td>DYP-SHP Coalition / 49th Cabinet</td><td>827</td></tr><tr><td>1993-1995</td><td>50th Cabinet DYP-SHP/CHP Coalition</td><td>1,008</td></tr><tr><td>1995</td><td>51st Cabinet DYP Government</td><td>125</td></tr><tr><td>1995-1996</td><td>DYP-CHP Coalition / 52nd Cabinet</td><td>68</td></tr><tr><td>1996 (1)</td><td>ANAP-DYP Coalition / 53rd Cabinet</td><td>230</td></tr><tr><td>1996-1997</td><td>RP-DYP Coalition / 54th Cabinet</td><td>357</td></tr><tr><td>1997-1999</td><td>ANAP-DSP-DTP Coalition / 55th Cabinet</td><td>1,137</td></tr><tr><td>1999 (1)</td><td>DSP Government / 56th Cabinet</td><td>18</td></tr><tr><td>1999-2002</td><td>DSP-MHP-ANAP Coalition / 57th Cabinet</td><td>3,375</td></tr><tr><td>2002-2003</td><td>1st AKP Government / 58th Cabinet</td><td>21</td></tr><tr><td>2003-2007</td><td>2nd AKP Government / 59th Cabinet</td><td>21,927</td></tr><tr><td>2007-2011</td><td>3rd AKP Government / 60th Cabinet</td><td>11,988</td></tr></tbody></table></div>
                     <p>The Privatization Administration (PA), established in 1986, was an important instrument in the institutionalization of this process. Although large privatization revenues were delayed until the AKP era, Özal had a decisive influence on the political and economic legitimacy of the sale of public assets in Turkey. Özal's technocratic background was one of the main elements that distinguished him from traditional politicians. As a figure with a bureaucratic background but who internalized the logic of the market, he prioritized goals such as downsizing the state, privatization, opening up and attracting foreign capital. In this context, Özal is considered one of the first architects of Turkey's globalization process.</p>
-
                     <hr class="my-5">
-
                     <h3 class="mb-4">The Post-1980 Globalization Process</h3>
                     <p>Following the military coup of September 12, the neoliberal reforms implemented under the leadership of Turgut Özal accelerated Turkey's integration with the global economy. This process, which started with the January 24, 1980 decisions, deepened after 1983 during Özal's premiership. Reforms aimed at reducing the weight of the state in the economy, liberalizing market dynamics and encouraging export-oriented growth were implemented.</p>
-                    
-                    <div class="alert alert-light border-0 shadow-sm p-4 mb-4" style="background-color: #fff; border: 2px dashed var(--sanzo-blue) !important;">
-                        <h5 class="text-uppercase" style="color: var(--sanzo-blue);">Turgut Özal's Reforms (post-1980)</h5>
-                        <ul class="mb-0" style="list-style-type: disc; padding-left: 1.5rem;">
-                            <li><strong>Export-led Growth Model:</strong> The import substitution system was abandoned and production oriented towards foreign markets was supported.</li>
-                            <li><strong>Liberalization of the Foreign Exchange Regime:</strong> Controls on foreign exchange were abolished and exporters were given the freedom to earn foreign exchange income.</li>
-                            <li><strong>Liberalization of Interest Rates:</strong> Interest rate controls were lifted to create competition in financial markets.</li>
-                            <li><strong>Liberalization of Imports:</strong> Customs tariffs were reduced and imported products were facilitated to enter the country.</li>
-                            <li><strong>Privatization and Withdrawal of the State from the Economy:</strong> The state's position as a producer was weakened through the sale of SEEs.</li>
-                            <li><strong>Financial Liberalization and Foreign Capital Encouragement:</strong> Institutions such as the CMB were established and access to international capital was facilitated (Duman 2018).</li>
-                        </ul>
-                    </div>
-
+                    <div class="alert alert-light border-0 shadow-sm p-4 mb-4" style="background-color: #fff; border: 2px dashed var(--sanzo-blue) !important;"><h5 class="text-uppercase" style="color: var(--sanzo-blue);">Turgut Özal's Reforms (post-1980)</h5><ul class="mb-0" style="list-style-type: disc; padding-left: 1.5rem;"><li><strong>Export-led Growth Model:</strong> The import substitution system was abandoned and production oriented towards foreign markets was supported.</li><li><strong>Liberalization of the Foreign Exchange Regime:</strong> Controls on foreign exchange were abolished and exporters were given the freedom to earn foreign exchange income.</li><li><strong>Liberalization of Interest Rates:</strong> Interest rate controls were lifted to create competition in financial markets.</li><li><strong>Liberalization of Imports:</strong> Customs tariffs were reduced and imported products were facilitated to enter the country.</li><li><strong>Privatization and Withdrawal of the State from the Economy:</strong> The state's position as a producer was weakened through the sale of SEEs.</li><li><strong>Financial Liberalization and Foreign Capital Encouragement:</strong> Institutions such as the CMB were established and access to international capital was facilitated (Duman 2018).</li></ul></div>
                     <p>These reforms transformed Turkey not only economically but also socially and culturally. From the mid-1980s onwards, a new capital class emerging from provinces such as Kayseri, Gaziantep, Denizli and Konya was dubbed the "Anatolian Tigers". These entrepreneurs started their journey with small and medium-sized enterprises, turned to exports and started to take part in international markets (Sevinç & Özdemir 2017).</p>
-                    
                     <p>The defining characteristic of the Anatolian Tigers is their combination of conservative values and market logic. This class laid the foundation of the "Islamic middle class" in Turkey by both preserving its local cultural identity and integrating with the global economy. In the 1990s, this group organized around institutions such as MÜSİAD (Industrialists' and Businessmen's Association of Turkey) and started to transfer their economic power to the political sphere.</p>
-
-                    <figure>
-                        <img src="../assets/img/3.png" alt="Anatolian Tigers by city" class="img-fluid">
-                        <figcaption>Table: Number of Companies by City/Region (Anatolian Tigers).</figcaption>
-                    </figure>
-
+                    <figure><img src="../assets/img/3.png" alt="Anatolian Tigers by city" class="img-fluid"><figcaption>Table: Number of Companies by City/Region (Anatolian Tigers).</figcaption></figure>
                     <hr class="my-5">
-
                     <h3 class="mb-4">Conclusion</h3>
                     <p>The September 12, 1980 military coup not only reshaped the political order in Turkey, but also paved the way for a radical paradigm shift in the economy. While the authoritarian nature of the coup aimed to exclude society from the political sphere and to re-centralize the state, paradoxically, thanks to Turgut Özal, the prominent figure of this regime, Turkey was rapidly and simultaneously integrated into the global economy through neoliberal transformation.</p>
                     <p>This dual process - repression in politics and liberalization in the economy - shaped both Turkey's struggle for democratization and its social fabric in the long run. The structural reforms carried out under Özal's leadership, together with practices such as the export-oriented growth model, privatization and liberalization of capital movements, positioned Turkey on the periphery of neoliberal globalization. The 1980 coup was not only a regime change but also the milestone of a social and economic restructuring.</p>
-
                     <hr class="my-5">
-
                     <h3 class="mb-4 text-secondary">References</h3>
-                    <ul class="list-unstyled" style="font-size: 0.9rem;">
-                        <li class="mb-2">Ahmad, F. (1993). <em>The Making of Modern Turkey</em>. London: Routledge.</li>
-                        <li class="mb-2">Boratav, K., Yeldan, A. E., & Köse, A. H. (2001). <em>Turkey: Globalization, Distribution and Social Policy, 1980-1998</em>. Oxford University Press.</li>
-                        <li class="mb-2">Duman, M. Z. (2018). Turgut Özal'ın Modernleşme Anlayışı.</li>
-                        <li class="mb-2">Evren, K. (1990). <em>Kenan Evren'in Anıları 2</em>. İstanbul: Milliyet Yayınları.</li>
-                        <li class="mb-2">Kırkgöz, Y. (2009). Globalization and English Language Policy in Turkey. <em>Educational Policy</em>, 23(5).</li>
-                        <li class="mb-2">Kırkpınar, D. (2022). 12 Eylül Askeri Darbe Sonrası Sosyal Değişim. <em>Uluslararası Sosyal Bilimler Dergisi</em>.</li>
-                        <li class="mb-2">Öniş, Z. (2004). Turgut Özal and His Economic Legacy. <em>Middle Eastern Studies</em>, 40(4).</li>
-                        <li class="mb-2">Sevinç, H., & Özdemir, M. (2017). Anadolu Kaplanları ve Türkiye Ekonomisine Etkileri. <em>Ekonomik ve Sosyal Araştırmalar Dergisi</em>.</li>
-                        <li class="mb-2">Tuğal, C. (2002). Islamism in Turkey: Beyond Instrument and Meaning. <em>Economy and Society</em>, 31(1).</li>
-                    </ul>
-
-                    <div class="presentation-box mt-5 mb-5">
-                        <h4 class="text-uppercase mb-3"><i class="fas fa-file-powerpoint me-2"></i>Supplementary Material</h4>
-                        <p class="text-muted">View the visual presentation slides accompanying this report.</p>
-                        <a href="../assets/files/1980 Coup and Turkish Globalization Presentation.pdf" target="_blank" class="btn btn-xl btn-primary">
-                            <i class="fas fa-download me-2"></i> Download Presentation (PDF)
-                        </a>
-                    </div>
-
-                    <div class="text-center mt-5 mb-5">
-                        <a href="../blog.html" class="btn btn-xl btn-outline-dark">
-                            <i class="fas fa-arrow-left me-2"></i> Back to Blog List
-                        </a>
-                    </div>
-
+                    <ul class="list-unstyled" style="font-size: 0.9rem;"><li class="mb-2">Ahmad, F. (1993). <em>The Making of Modern Turkey</em>. London: Routledge.</li><li class="mb-2">Boratav, K., Yeldan, A. E., & Köse, A. H. (2001). <em>Turkey: Globalization, Distribution and Social Policy, 1980-1998</em>. Oxford University Press.</li><li class="mb-2">Duman, M. Z. (2018). Turgut Özal'ın Modernleşme Anlayışı.</li><li class="mb-2">Evren, K. (1990). <em>Kenan Evren'in Anıları 2</em>. İstanbul: Milliyet Yayınları.</li><li class="mb-2">Kırkgöz, Y. (2009). Globalization and English Language Policy in Turkey. <em>Educational Policy</em>, 23(5).</li><li class="mb-2">Kırkpınar, D. (2022). 12 Eylül Askeri Darbe Sonrası Sosyal Değişim. <em>Uluslararası Sosyal Bilimler Dergisi</em>.</li><li class="mb-2">Öniş, Z. (2004). Turgut Özal and His Economic Legacy. <em>Middle Eastern Studies</em>, 40(4).</li><li class="mb-2">Sevinç, H., & Özdemir, M. (2017). Anadolu Kaplanları ve Türkiye Ekonomisine Etkileri. <em>Ekonomik ve Sosyal Araştırmalar Dergisi</em>.</li><li class="mb-2">Tuğal, C. (2002). Islamism in Turkey: Beyond Instrument and Meaning. <em>Economy and Society</em>, 31(1).</li></ul>
+                    <div class="presentation-box mt-5 mb-5"><h4 class="text-uppercase mb-3"><i class="fas fa-file-powerpoint me-2"></i>Supplementary Material</h4><p class="text-muted">View the visual presentation slides accompanying this report.</p><a href="../assets/files/1980 Coup and Turkish Globalization Presentation (2).pdf" target="_blank" class="btn btn-xl btn-primary"><i class="fas fa-download me-2"></i> Download Presentation (PDF)</a></div>
+                    <div class="text-center mt-5 mb-5"><a href="../blog.html" class="btn btn-xl btn-outline-dark"><i class="fas fa-arrow-left me-2"></i> Back to Blog List</a></div>
                 </div>
             </div>
         </div>
     </section>
-
-    <footer class="footer text-center">
-        <div class="container">
-            <small class="text-white">Copyright &copy; Kadir Cem Yilmaz 2025</small>
-        </div>
-    </footer>
-
+    <footer class="footer text-center"><div class="container"><small>Copyright &copy; Kadir Cem Yilmaz 2025</small></div></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Spiderman ve Görev Yapısı: Oyun İçerik Analizi" />
+    <meta name="author" content="Kadir Cem Yılmaz" />
+    <title>Spiderman ve Görev Yapısı - Kadir Cem Yılmaz</title>
+    
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+    
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,600;0,700;1,700&family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <link href="../css/styles.css" rel="stylesheet" />
+    
+    <style>
+        /* --- SANZO WADA COLOR PALETTE --- */
+        :root {
+            --sanzo-blue: #064f6e;
+            --sanzo-orange: #f99d1b;
+            --sanzo-cream: #f5ecc2;
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3, h4, h5, h6, .navbar-brand, .masthead-heading, .card-title {
+            font-family: 'Kanit', sans-serif !important;
+            font-weight: 700; 
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: var(--sanzo-blue) !important;
+        }
+        
+        body, p, .lead, .nav-link, .btn, .footer, .copyright, .text-muted, li, small, .report-text, .masthead-subheading {
+            font-family: 'Rubik', sans-serif !important;
+        }
+
+        /* GENEL AYARLAR */
+        body {
+            background-color: var(--sanzo-cream) !important;
+            color: var(--sanzo-blue) !important;
+        }
+
+        /* NAVBAR */
+        #mainNav {
+            background-color: var(--sanzo-blue) !important;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        #mainNav .navbar-brand { color: var(--sanzo-cream) !important; } /* İsim Rengi Düzeltildi */
+        #mainNav .nav-link { color: var(--sanzo-cream) !important; font-weight: 500; }
+        #mainNav .nav-link.active, #mainNav .nav-link:hover { color: var(--sanzo-orange) !important; }
+
+        /* HEADER */
+        header.masthead {
+            background-color: var(--sanzo-blue) !important;
+            padding-top: 11rem !important; 
+            padding-bottom: 6rem !important;
+            color: var(--sanzo-cream) !important;
+        }
+        .masthead-heading, .masthead-subheading, .text-white, .mt-2 {
+            color: var(--sanzo-cream) !important;
+        }
+        .divider-light .divider-custom-line { background-color: var(--sanzo-cream) !important; }
+        .divider-light .divider-custom-icon { color: var(--sanzo-orange) !important; }
+
+        /* RAPOR METNİ AYARLARI */
+        .report-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--sanzo-blue) !important; 
+            text-align: justify;
+        }
+        
+        /* LİSTELER */
+        ul.custom-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul.custom-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        ul.custom-list li::before {
+            content: "\f188"; /* Bug icon for Spider vibe */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--sanzo-orange);
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        /* Çizgiler */
+        hr {
+            border-top-color: var(--sanzo-blue) !important;
+            opacity: 0.2;
+        }
+
+        /* BUTTONS */
+        .btn { transition: all 0.3s ease-in-out !important; font-weight: 500; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .btn-outline-dark { color: var(--sanzo-blue) !important; border-color: var(--sanzo-blue) !important; }
+        .btn-outline-dark:hover { background-color: var(--sanzo-blue) !important; color: var(--sanzo-cream) !important; }
+
+        /* FOOTER */
+        .footer { background-color: var(--sanzo-blue) !important; color: var(--sanzo-cream) !important; }
+        .copyright { background-color: #04384f !important; color: var(--sanzo-cream) !important; }
+    </style>
+</head>
+<body id="page-top">
+
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Kadir Cem Yılmaz</a>
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../index.html#portfolio">Portfolıo</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../blog.html">Back to Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="masthead bg-primary text-white text-center">
+        <div class="container d-flex align-items-center flex-column">
+            <h1 class="masthead-heading text-uppercase mb-0">Spıderman ve Görev Yapısı</h1>
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-spider"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <p class="masthead-subheading font-weight-light mb-0">Oyun İçerik Analizi</p>
+            <p class="mt-2 fst-italic">Kadir Cem Yılmaz | Dijital Oyun Tasarımı</p>
+        </div>
+    </header>
+
+    <section class="page-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 report-text">
+
+                    <div class="alert alert-light border-0 shadow-sm p-4 mb-5" style="background-color: rgba(255,255,255,0.6); border-left: 5px solid var(--sanzo-orange) !important;">
+                        <h4 class="text-uppercase mb-3">Giriş</h4>
+                        <p class="mb-0">Spiderman oyunları tarihte ilk olarak 1982 yılında Atari 2600 konsoluna çıkış yaparak karşımıza çıkıyor. Yıllar içinde birbirinden farklı stüdyolar ve birbirinden farklı konsollara çıkış yapan Spiderman'lar günümüzde Insomniac çatısı altında kendi değerini bularak günümüzün kült yapımlarından biri olmayı başarıyor. Peki Insomniac eski Spiderman oyunlarından neleri farklı yaptı? Neleri daha iyi yaptı ki şu an günümüzde eski oyunlardan hiçbiri hatırlanmazken Insomniac'ın Spiderman oyunları oyun dünyasında yer etti? Bunun cevabını ve günümüzde modern AAA oyunlarda aşina olduğumuz görev yapılarının hangilerini hangi ölçüde, nasıl kullandığına dair bir inceleme yazıyor olacağım. Ele aldığım ve severek oynadığım Marvel's Spiderman oyununda görevleri sınıflandırdığım ve bu görevlerde hangi mekaniklerin kullanıldığı ve tasarımsal anlamda nelerden faydalandıklarını açıklıyor olacağım.</p>
+                    </div>
+
+                    <h3 class="mb-4">Ana Fikir: Spiderman Oyunlarında Görev Çeşitliliği ve Mekaniklerin Kullanımları</h3>
+                    <p>2018 yılında Playstation 4 konsoluna çıkış yapmış Marvel's Spiderman günümüzde hala beğeni toplayan bir oyun olmuştur. Marvel's Spiderman'in başardığı en önemli şeylerden birisi açık dünyasının doluluğu ve New York şehrini hiç sıkılmadan gezip tozma olanağı sağlaması. Bu araştırmada ise açık dünyası dolduran elementleri tek tek inceleyip bunun yanında ana görev kurgusuna bakıp, görevlerde ve etkinliklerde oyunun hangi mekaniklerini kullandıklarını ve oyuncuyu nasıl oyunda tuttuklarını inceleyeceğim.</p>
+                    <p>Temel olarak Spiderman karakterinin ağ atması, savaş yetenekleri, gizlilik yetenekleri, ağ yeteneği ile yaptıkları, ağ yeteneğini geliştirmesiyle oluşan mekanikler kullanılarak açık dünyada birbirinden farklı yan unsurlar eklenmiş oyuna. Bununla beraber ana hikayede ise hem Spiderman'in kişiliği, kendi hikayesi oyuna konu olmuş hem de yine Spidermanin yetenekleri görevlere konu edilmiştir. Bunun yanı sıra da boss savaşları oyuna eklenerek oyuncuların yeteneklerini harmanlayarak kullanmalarına olanak tanımıştır.</p>
+
+                    <hr class="my-5">
+
+                    <h3 class="mb-4">Spiderman'in Yetenekleri</h3>
+                    <ul class="custom-list">
+                        <li><strong>1. Ağ Atma:</strong> Spiderman'in en ikonik yeteneklerinden biri ağ atmadır. Bu yetenek, hem savaşta hem de şehirde gezinirken kullanılabilir.
+                            <ul>
+                                <li><em>Savaşta Ağ Kullanımı:</em> Düşmanları geçici olarak etkisiz hale getirmek, silahlarını ellerinden almak veya onları duvarlara ve yerlere yapıştırmak için kullanılır.</li>
+                                <li><em>Seyahat İçin Ağ Kullanımı:</em> Spiderman, ağ kullanarak New York şehrinde hızla ve akıcı bir şekilde hareket eder. Bu mekanik, oyunculara büyük bir özgürlük ve hız hissi verir.</li>
+                            </ul>
+                        </li>
+                        <li><strong>2. Duvar Tırmanma:</strong> Spiderman, herhangi bir dik yüzeye tırmanabilir. Bu yetenek, hem keşif hem de savaşta stratejik avantaj sağlar.
+                            <ul>
+                                <li><em>Keşif:</em> Şehirde yüksek binalara tırmanarak çevreyi keşfetmek ve görevlerin bulunduğu noktalara hızlıca ulaşmak mümkündür.</li>
+                                <li><em>Savaş:</em> Düşmanlardan kaçmak veya onları yukarıdan izleyip stratejik saldırılar düzenlemek için kullanılır.</li>
+                            </ul>
+                        </li>
+                        <li><strong>3. Süper Güç ve Refleksler:</strong> Spiderman'in doğuştan gelen süper gücü ve refleksleri, onun savaş yeteneklerini belirgin kılar.
+                            <ul>
+                                <li><em>Güçlü Saldırılar:</em> Düşmanlara karşı güçlü yakın dövüş saldırıları düzenler.</li>
+                                <li><em>Hızlı Refleksler:</em> Gelen saldırılardan kaçınmak ve düşmanlara karşı hızlı karşılık vermek için kullanılır.</li>
+                            </ul>
+                        </li>
+                        <li><strong>4. Spidey Sense:</strong> Spiderman'in özel hisleri, yaklaşan tehlikeleri sezmesine ve onlardan kaçınmasına yardımcı olur.
+                            <ul>
+                                <li><em>Tehlike Sezme:</em> Düşman saldırılarını önceden hissetmek ve zamanında kaçmak veya karşılık vermek.</li>
+                                <li><em>Gizlilik:</em> Gizli görevlerde düşmanların fark edilmeden etkisiz hale getirilmesi için kullanılır.</li>
+                            </ul>
+                        </li>
+                        <li><strong>5. Kombolar ve Özel Hareketler:</strong> Spiderman, savaş sırasında çeşitli kombolar ve özel hareketler kullanabilir.
+                            <ul>
+                                <li><em>Hava Komboları:</em> Düşmanları havaya kaldırarak ardı ardına saldırılar düzenlemek.</li>
+                                <li><em>Çevresel Kullanım:</em> Çevredeki nesneleri silah olarak kullanarak düşmanlara karşı avantaj sağlamak.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <hr class="my-5">
+
+                    <h3 class="mb-4">Oyunda Varolan Mekanikler</h3>
+                    <ul class="custom-list">
+                        <li><strong>1. Açık Dünya Keşfi:</strong> Marvel's Spiderman oyunları, geniş ve detaylı bir açık dünya sunar. Oyuncular, New York şehrini özgürce keşfedebilirler. Hızlı Seyahat ve Keşif (gizlenmiş eşyalar, ipuçları) önemli unsurlardır.</li>
+                        <li><strong>2. Görev Yapısı ve Çeşitleri:</strong> Ana Görevler hikayeyi ilerletirken, Yan Görevler ekstra içerik sunar.</li>
+                        <li><strong>3. Dövüş Mekanikleri:</strong> Dalga dalga gelen düşmanlar, Boss Savaşları ve Gizlilik/Saldırı kombinasyonları oyunun merkezindedir.</li>
+                        <li><strong>4. Gizlilik Mekanikleri:</strong> Spiderman, düşmanlardan saklanarak veya havalandırma borularında ilerleyerek gizlice hareket edebilir ve düşmanları sessizce etkisiz hale getirebilir.</li>
+                        <li><strong>5. Ekipman ve Yükseltmeler:</strong> Oyuncular, dövüş yeteneklerini, ağ özelliklerini ve ekipmanlarını geliştirerek Spiderman'i daha güçlü hale getirebilirler.</li>
+                        <li><strong>6. Etkileşimli Çevre:</strong> Çevredeki nesneleri kullanarak düşmanlara saldırmak ve çevresel bulmacaları çözmek oyunun bir parçasıdır.</li>
+                    </ul>
+
+                    <hr class="my-5">
+
+                    <h3 class="mb-4">Ana Hikaye ve Ana Görev Kurgusu</h3>
+                    <p>Marvel's Spiderman oyunlarının ana hikaye kurgusu, Spiderman'in şehirdeki suçlarla mücadele etmesi üzerine kuruludur. Oyunun ana görevleri, genellikle birkaç aşamadan oluşur ve oyunculara çeşitli mekanikler sunar:</p>
+                    
+                    <p><strong>Açık Dünyada Bir Yere Girme:</strong> Ana görevler genellikle Spiderman'in belirli bir yere girip orada bir suç örgütüyle yüzleşmesini içerir. Bu görevlerde, oyuncular Spiderman'in ağ atma ve duvar tırmanma yeteneklerini kullanarak hedefe ulaşırlar. Örneğin, Fisk Tower'a yapılan baskın görevinde, oyuncular Spiderman'i kullanarak binanın dış cephesine tırmanır, camlardan içeri girer ve koridorlarda düşmanlarla karşılaşır. Bu görevlerdeki tasarım, oyunculara dikey hareket özgürlüğü sunarak mekanları farklı açılardan keşfetmelerine olanak tanır.</p>
+                    
+                    <p><strong>Ağ Özelliklerinin Kullanılması:</strong> Spiderman'in ağ yetenekleri, görevlerde önemli bir rol oynar. Oyuncular, ağ atarak düşmanları etkisiz hale getirebilir, hızlıca yer değiştirebilir veya çevredeki nesneleri kullanarak saldırılar düzenleyebilirler. Örneğin, bir görevde Spiderman, bir grup düşmanı sessizce alt etmek için ağları kullanarak onları duvarlara ve tavanlara yapıştırabilir. Bu mekanikler, oyunculara yaratıcı stratejiler geliştirme imkanı sunar.</p>
+                    
+                    <p><strong>Gizlice İlerlemeli Kısımlar:</strong> Bazı görevlerde, Spiderman'in gizlilik yetenekleri öne çıkar. Bu bölümlerde oyuncular, düşmanları fark ettirmeden etkisiz hale getirmeye çalışır. Örneğin, bir depo baskını görevinde, oyuncular Spiderman'i kullanarak yüksek noktalara tırmanır, düşmanları yukarıdan izler ve sessizce onları etkisiz hale getirir. Gizlilik görevleri, oyunculara sabır ve strateji kullanma fırsatı tanır.</p>
+                    
+                    <p><strong>Dövüş Kısımları:</strong> Spiderman'in dövüş yetenekleri, oyun boyunca sıkça kullanılır. Düşmanlarla dalga dalga savaşarak, kombolar ve özel hareketler ile onları alt edebilir. Örneğin, bir inşaat sahasında geçen dövüş bölümünde, oyuncular Spiderman'in hızlı reflekslerini ve güçlü saldırılarını kullanarak düşmanları etkisiz hale getirir.</p>
+                    
+                    <p><strong>Boss Savaşları:</strong> Ana hikayenin önemli anlarından biri de boss savaşlarıdır. Bu savaşlar, oyuncuların tüm yeteneklerini kullanarak büyük düşmanları alt etmelerini gerektirir. Her boss, kendine özgü taktikler ve zorluklar sunar. Örneğin, Kingpin ile yapılan savaşta, oyuncular Kingpin'in güçlü saldırılarından kaçınarak ona karşı saldırı düzenler.</p>
+                    
+                    <p><strong>Mary Jane ile Gizlice İlerleme:</strong> Bazı görevlerde, oyuncular Mary Jane'in kontrolünü ele alır. Mary Jane, dikkat dağıtma yeteneğine sahiptir ve bu yetenekle düşmanları kandırarak gizlice ilerler. Örneğin, bir müzede geçen görevde, oyuncular Mary Jane'i kullanarak güvenlik görevlilerinin dikkatini dağıtır ve gizlice hedeflerine ulaşırlar. Bu görevler, oyunculara farklı bir bakış açısı sunar.</p>
+
+                    <hr class="my-5">
+
+                    <h3 class="mb-4">Yan Görevler ve Açık Dünya Unsurları</h3>
+                    <p>Marvel's Spiderman oyunlarında yan görevler, ana görevleri tamamlayan ve oyunculara ekstra içerik sunan etkinliklerdir. Bu görevler, ana görevlerdeki mekaniklerin birçoğunu içerir ve oyunculara çeşitli deneyimler sunar:</p>
+                    
+                    <ul class="custom-list">
+                        <li><strong>Outpost Ele Geçirme:</strong> Şehirdeki suç örgütlerinin üslerini temizleyerek kontrol altına almak. Bu görevlerde, oyuncular düşman dalgalarıyla savaşır ve üsleri ele geçirir (Örn: Fisk'in inşaat alanları).</li>
+                        <li><strong>Güvercin Kovalamaca:</strong> New York'ta uçuşan güvercinleri yakalama görevleri. Bu görevler, Spiderman'in ağ yeteneklerini ve hızlı hareket kabiliyetini test eder (Örn: Howard'ın güvercinleri).</li>
+                        <li><strong>Bomba Zorlukları:</strong> Şehre yerleştirilmiş bombaları bulup etkisiz hale getirme. Bu görevler, zamanla yarışmayı ve Spiderman'in hızını kullanmayı gerektirir (Örn: Taskmaster görevleri).</li>
+                        <li><strong>Black Cat Fotoğraf Bulmacaları:</strong> Şehirde gizlenmiş Black Cat eşyalarını bulma. Bu görevlerde, oyuncular belirli yerleri fotoğraflayarak ipuçlarını toplar.</li>
+                        <li><strong>Araştırma Binaları:</strong> Çeşitli bilimsel problemleri çözmek için yapılan görevler. Bu görevlerde, çevre kirliliği, hava kirliliği ve doğa sorunları gibi konular ele alınır (Örn: Oscorp istasyonları).</li>
+                        <li><strong>Polis Yardım Görevleri:</strong> Şehirde devriye gezen polislerin yardıma ihtiyaç duyduğu durumlarda suçluları etkisiz hale getirme. Araba kovalamaları ve çatışmalar bu görevlerin bir parçasıdır.</li>
+                        <li><strong>New York Landmarkları Fotoğraflama:</strong> Şehirdeki önemli ve görmeye değer yerlerin fotoğraflarını çekmek. Bu görevler, oyuncuların şehri keşfetmesini teşvik eder.</li>
+                    </ul>
+
+                    <hr class="my-5">
+
+                    <h3 class="mb-4">Özet ve Sonuç</h3>
+                    <p>Marvel's Spiderman oyunları, görev yapıları ve açık dünya unsurlarıyla zengin bir deneyim sunar. Ana görevlerde Spiderman'in yetenekleri ve mekanikleri ustalıkla kullanılırken, yan görevler bu deneyimi daha da derinleştirir. Insomniac Games, Spiderman'i oyun dünyasına taşırken, karakterin doğasına sadık kalmış ve oyunculara keyifli bir açık dünya macerası sunmayı başarmıştır. Bu görev yapıları ve mekanikler, oyunun başarısında büyük rol oynamıştır ve gelecekteki oyunlar için de ilham kaynağı olacaktır.</p>
+
+                    <hr class="my-5">
+
+                    <h3 class="mb-4 text-secondary">Kaynakça</h3>
+                    <ul class="list-unstyled" style="font-size: 0.9rem;">
+                        <li class="mb-2">Game design analysis: The frustrations of Mary Jane missions in Spider-Man. <a href="https://uxdesign.cc/game-design-analysis-exploring-the-frustrations-of-mary-jane-missions-in-marvels-spider-man-games-e8e4843c40d0" target="_blank">Link</a></li>
+                        <li class="mb-2">Hollywood Gamers: Digital Convergence in the Film and Video Game Industries. <a href="https://books.google.com.tr/books?hl=tr&lr=&id=RMd_J39qY_4C" target="_blank">Link</a></li>
+                        <li class="mb-2">Experimental Study of The Use of Spiderman Game Media. <a href="https://journal.unesa.ac.id/index.php/metafora/article/view/12536" target="_blank">Link</a></li>
+                        <li class="mb-2">Reflection of Marvel's Spider-Man Games in the Context of Current and Upcoming Media Trends. <a href="https://www.ceeol.com/search/article-detail?id=1009101" target="_blank">Link</a></li>
+                        <li class="mb-2">Adventures in level design: generating missions and spaces for action adventure games. <a href="https://dl.acm.org/doi/abs/10.1145/1814256.1814257" target="_blank">Link</a></li>
+                        <li class="mb-2">The Puppet Master Problem: Design for Real-World, Mission Based Gaming. <a href="https://avantgame.com/McGonigal_THE-PUPPET-MASTER-PROBLEM_MITpress.pdf" target="_blank">Link</a></li>
+                    </ul>
+
+                    <div class="text-center mt-5 mb-5">
+                        <a href="../blog.html" class="btn btn-xl btn-outline-dark">
+                            <i class="fas fa-arrow-left me-2"></i> Back to Blog List
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer text-center">
+        <div class="container">
+            <small class="text-white">Copyright &copy; Kadir Cem Yilmaz 2025</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

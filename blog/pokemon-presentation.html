@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Pokemon Sword & Shield and Pokemon Go Analysis" />
+    <meta name="author" content="Kadir Cem Yilmaz" />
+    <title>Pokemon Analysis - Kadir Cem Yilmaz</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,600;0,700;1,700&family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet" />
+    <style>
+        :root { --sanzo-blue: #064f6e; --sanzo-orange: #f99d1b; --sanzo-cream: #f5ecc2; }
+        body { background-color: var(--sanzo-cream) !important; color: var(--sanzo-blue) !important; font-family: 'Rubik', sans-serif !important; }
+        h1, h2, h3, h4, h5, h6, .navbar-brand, .masthead-heading, .card-title, caption { font-family: 'Kanit', sans-serif !important; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--sanzo-blue) !important; }
+        #mainNav { background-color: var(--sanzo-blue) !important; padding-top: 1rem; padding-bottom: 1rem; }
+        #mainNav .navbar-brand { color: var(--sanzo-cream) !important; }
+        #mainNav .nav-link { color: var(--sanzo-cream) !important; font-weight: 500; }
+        #mainNav .nav-link.active, #mainNav .nav-link:hover { color: var(--sanzo-orange) !important; }
+        header.masthead { background-color: var(--sanzo-blue) !important; padding-top: 11rem !important; padding-bottom: 6rem !important; color: var(--sanzo-cream) !important; }
+        .masthead-heading, .masthead-subheading, .text-white, .mt-2 { color: var(--sanzo-cream) !important; }
+        .divider-light .divider-custom-line { background-color: var(--sanzo-cream) !important; }
+        .divider-light .divider-custom-icon { color: var(--sanzo-orange) !important; }
+        .footer { color: var(--sanzo-cream) !important; }
+        .report-text { font-size: 1.1rem; line-height: 1.8; text-align: justify; }
+        hr { border-top-color: var(--sanzo-blue) !important; opacity: 0.2; }
+        
+        /* RESİM STİLLERİ */
+        figure { margin: 2rem 0; text-align: center; }
+        .slide-image { border: 3px solid var(--sanzo-blue); border-radius: 10px; box-shadow: 5px 5px 0px var(--sanzo-orange); max-width: 100%; height: auto; transition: transform 0.3s ease; }
+        .slide-image:hover { transform: scale(1.02); }
+        
+        /* ZIGZAG DÜZENİ İÇİN */
+        .content-block { margin-bottom: 4rem; align-items: center; border-bottom: 1px dashed rgba(6, 79, 110, 0.2); padding-bottom: 2rem; }
+        .content-block:last-child { border-bottom: none; }
+
+        .btn { transition: all 0.3s ease-in-out !important; font-weight: 500; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .btn-outline-dark { color: var(--sanzo-blue) !important; border-color: var(--sanzo-blue) !important; }
+        .btn-outline-dark:hover { background-color: var(--sanzo-blue) !important; color: var(--sanzo-cream) !important; }
+    </style>
+</head>
+<body id="page-top">
+
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Kadir Cem Yilmaz</a>
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../index.html#portfolio">Portfolio</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../blog.html">Back to Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="masthead bg-primary text-white text-center">
+        <div class="container d-flex align-items-center flex-column">
+            <h1 class="masthead-heading text-uppercase mb-0">Pokemon Analysis</h1>
+            <div class="divider-custom divider-light"><div class="divider-custom-line"></div><div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div><div class="divider-custom-line"></div></div>
+            <p class="masthead-subheading font-weight-light mb-0">Sword & Shield and Pokemon Go Case Study</p>
+            <p class="mt-2 fst-italic"> Kadir Cem Yilmaz & Enes Cubuk</p>
+        </div>
+    </header>
+
+    <section class="page-section report-text">
+        <div class="container">
+
+            <div class="row content-block">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="../assets/img/Nintendo (1).jpg" alt="Pokemon Sword and Shield Cover" class="slide-image">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-3">Pokemon Sword & Shield</h3>
+                    <p><strong>What was the game idea?</strong></p>
+                    <p>Pokemon Sword & Shield is an RPG/Adventure game developed by Game Freak and published by Nintendo for the Nintendo Switch in 2019. It introduced the 8th generation of Pokemon to the series.</p>
+                    <p>Like every Pokemon game, players can tame and train creatures. You can battle other players or join forces to participate in raids together.</p>
+                </div>
+            </div>
+
+            <div class="row content-block flex-row-reverse">
+                <div class="col-lg-12 text-center mb-4">
+                    <img src="../assets/img/Nintendo (2).jpg" alt="Pokemon Generations" class="slide-image" style="max-width: 80%;">
+                </div>
+                <div class="col-lg-12 text-center">
+                    <p>The evolution of Pokemon Generations from Gen 1 to Gen 8.</p>
+                </div>
+            </div>
+
+            <div class="row content-block">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="../assets/img/Nintendo (3).jpg" alt="Target Audience Chart" class="slide-image mb-3">
+                    <img src="../assets/img/Nintendo (15).jpg" alt="Pokemon Go Demographics" class="slide-image">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-3">Target Audience</h3>
+                    <p><strong>Who was the target audience?</strong></p>
+                    <p>Nintendo generally targets a broad audience, creating games for everyone from 7 to 70, including kids, families, and seniors.</p>
+                    <p>However, the primary priority is the <strong>Generation Y (25-35 age range)</strong>—the generation that grew up with Pokemon products as children.</p>
+                </div>
+            </div>
+
+            <div class="row content-block flex-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="../assets/img/Nintendo (4).jpg" alt="Company Structure" class="slide-image mb-3">
+                    <img src="../assets/img/Nintendo (5).jpg" alt="Pokemon Company HQ" class="slide-image">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-3">Funding & Development</h3>
+                    <p><strong>How did they fund the game?</strong></p>
+                    <p>Game Freak has been the developer of Pokemon games on Nintendo consoles since Pokemon Red and Blue. The Pokemon brand is currently owned by <strong>The Pokemon Company</strong>, a joint venture between Nintendo, Game Freak, and Creatures.</p>
+                    <p>Nintendo publishes the Pokemon games developed by Game Freak.</p>
+                </div>
+            </div>
+
+            <div class="row content-block">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="../assets/img/Nintendo (6).jpg" alt="Dexit Controversy" class="slide-image mb-2">
+                    <img src="../assets/img/Nintendo (8).jpg" alt="Boycott News" class="slide-image mb-2">
+                    <img src="../assets/img/Nintendo (10).jpg" alt="Twitter Reactions" class="slide-image">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-3">Marketing & Controversy</h3>
+                    <p>The game was first teased at E3 2017. In May 2018, The Pokemon Company confirmed a Switch-exclusive title for late 2019. It was fully revealed at a Nintendo Direct in February 2019, announcing the setting and starter Pokemon. The release date was set for November 15.</p>
+                    <p>Before release, the game faced heavy criticism. The biggest issue was that only 400 out of 900+ Pokemon were included. Fans launched hashtags like <strong>#dexit</strong> and <strong>#bringbacknationaldeck</strong> to boycott the game. Many new features also sparked debate.</p>
+                    <p>According to Metacritic data, while the game holds an 80 rating from 88 critics, it received a user score of only 4.6 due to fan backlash.</p>
+                </div>
+            </div>
+
+            <div class="row content-block flex-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="../assets/img/Nintendo (9).jpg" alt="Sales Figures" class="slide-image mb-3">
+                    <img src="../assets/img/Nintendo (11).jpg" alt="Top Selling Titles" class="slide-image">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-3">Sales Performance</h3>
+                    <p><strong>How many copies did they sell?</strong></p>
+                    <p>The game launched on November 15, 2019. It sold 16 million copies in its first month, becoming the 5th best-selling game on Switch immediately.</p>
+                    <p>By the end of 2020, it surpassed 20 million sales. By the end of 2021, it reached 24 million, becoming the 2nd best-selling game in Pokemon history.</p>
+                    <p><em>"The Pokemon Sword and Shield boycott didn't end well. In fact, quite the opposite happened."</em></p>
+                </div>
+            </div>
+
+            <div class="row content-block">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="../assets/img/Nintendo (14).jpg" alt="Double Pack" class="slide-image">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-3">Monetization Model</h3>
+                    <p><strong>Which monetization techniques did they use?</strong></p>
+                    <p>Pokemon Sword and Shield utilizes monetization methods through both Retail Purchase and Digital Distribution.</p>
+                    <ul>
+                        <li>Single Game: $59.99</li>
+                        <li>Double Pack: $119.99</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="my-5" style="border-top: 3px solid var(--sanzo-blue); opacity: 1;">
+
+            <div class="row content-block">
+                <div class="col-12 text-center mb-4">
+                    <h2 class="text-uppercase" style="font-size: 3rem;">Pokemon GO Analysis</h2>
+                </div>
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="../assets/img/Nintendo (20).jpg" alt="Pokemon Go Shop" class="slide-image">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-3">Game Idea & Funding</h3>
+                    <p><strong>What was the game idea?</strong></p>
+                    <p>The biggest feature separating Pokemon Go from classic Pokemon games is that it uses <strong>Augmented Reality (AR)</strong> technology to simulate the experience of catching Pokemon. To increase the feeling of catching them, you must search for Pokemon in the real world.</p>
+                    <p><strong>Funding:</strong> Pokemon Go's developer is an American company called Niantic. They started as a start-up within Google in 2010. When Google restructured under Alphabet Inc. in 2015, Niantic became independent. Later, they received a total investment of $30 million from Google, Nintendo, and The Pokemon Company.</p>
+                </div>
+            </div>
+
+            <div class="row content-block flex-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="../assets/img/Nintendo (25).jpg" alt="Pokemon Go Revenue Chart" class="slide-image mb-3">
+                    <img src="../assets/img/Nintendo (22).jpg" alt="Download Stats" class="slide-image">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-3">Revenue & Monetization</h3>
+                    <p><strong>Which monetization techniques did they use?</strong></p>
+                    <p>The game can be downloaded for free from the Play Store and App Store. It contains various microtransaction options.</p>
+                    <p>Cosmetics and packs to make the game easier can be bought with in-game currency, while some special items are sold directly for cash. Items that facilitate gameplay can also be bought with this currency. You can get in-game currency by grinding or buying it with real money.</p>
+                    <p><strong>Sales:</strong> Pokemon Go has been downloaded over 500 million times. Revenue reached $1.21 billion in 2021.</p>
+                </div>
+            </div>
+
+            <div class="row content-block">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="../assets/img/Nintendo (16).jpg" alt="Competitors List" class="slide-image mb-3">
+                    <img src="../assets/img/Nintendo (18).jpg" alt="Niantic Nintendo Google Relation" class="slide-image">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-3">Competitors & Structure</h3>
+                    <p><strong>Who were the competitors?</strong></p>
+                    <p>The best augmented reality games for Android include Ingress Prime, Harry Potter: Wizards Unite, Jurassic World Alive, and The Walking Dead: Our World.</p>
+                    <p><strong>Partnership:</strong> Nintendo isn't directly selling the Pokémon Go game but still benefits from its success through its 32% stake in The Pokémon Company and investment in Niantic.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5 mb-5">
+                <a href="../blog.html" class="btn btn-xl btn-outline-dark">
+                    <i class="fas fa-arrow-left me-2"></i> Back to Blog List
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer text-center">
+        <div class="container">
+            <small class="text-white">Copyright &copy; Kadir Cem Yilmaz 2025</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

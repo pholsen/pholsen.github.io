@@ -24,45 +24,31 @@
             --sanzo-cream: #f5ecc2;
         }
 
-        /* --- TYPOGRAPHY AYARLARI (KANIT + RUBIK) --- */
-        
+        /* --- TYPOGRAPHY --- */
         h1, h2, h3, h4, h5, h6, .navbar-brand, .masthead-heading, .card-title {
             font-family: 'Kanit', sans-serif !important;
             font-weight: 700; 
             letter-spacing: 0.5px;
             text-transform: uppercase;
+            color: var(--sanzo-blue) !important;
         }
         
         body, p, .lead, .nav-link, .btn, .footer, .copyright, .text-muted, li, small {
             font-family: 'Rubik', sans-serif !important;
         }
 
-        /* GENEL AYARLAR */
+        /* COLORS & LAYOUT */
         body {
             background-color: var(--sanzo-cream) !important;
             color: var(--sanzo-blue) !important;
         }
 
-        /* NAVBAR */
         #mainNav {
             background-color: var(--sanzo-blue) !important;
             padding-top: 1rem;
             padding-bottom: 1rem;
         }
-        
-        /* HEADER (MASTHEAD) */
-        header.masthead {
-            background-color: var(--sanzo-blue) !important;
-            padding-top: 11rem !important;
-            padding-bottom: 6rem !important;
-        }
-
-        /* HEADER TEXT COLORS */
-        .masthead-heading, .masthead-subheading, .text-white {
-            color: var(--sanzo-cream) !important;
-        }
-
-        /* LINKS & NAV ITEMS */
+        #mainNav .navbar-brand { color: var(--sanzo-cream) !important; }
         #mainNav .nav-link {
             color: var(--sanzo-cream) !important;
             font-weight: 500; 
@@ -71,12 +57,13 @@
             color: var(--sanzo-orange) !important;
         }
 
-        /* DIVIDERS & ICONS */
-        .divider-custom .divider-custom-line {
-            background-color: var(--sanzo-orange) !important;
+        header.masthead {
+            background-color: var(--sanzo-blue) !important;
+            padding-top: 11rem !important;
+            padding-bottom: 6rem !important;
         }
-        .divider-custom .divider-custom-icon {
-            color: var(--sanzo-orange) !important;
+        .masthead-heading, .masthead-subheading, .text-white {
+            color: var(--sanzo-cream) !important;
         }
         .divider-light .divider-custom-line {
             background-color: var(--sanzo-cream) !important;
@@ -85,7 +72,6 @@
             color: var(--sanzo-orange) !important;
         }
 
-        /* CARD DESIGN */
         .card {
             background-color: #ffffff;
             border: 2px solid var(--sanzo-blue);
@@ -100,12 +86,10 @@
         .card-title {
             color: var(--sanzo-blue) !important;
         }
-
         .text-muted {
             color: #6c757d !important;
         }
 
-        /* BUTTONS */
         .btn {
             transition: all 0.3s ease-in-out !important;
             font-weight: 500;
@@ -115,7 +99,6 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             cursor: pointer;
         }
-
         .btn-primary, .btn-xl {
             background-color: var(--sanzo-orange) !important;
             border-color: var(--sanzo-orange) !important;
@@ -125,7 +108,6 @@
             background-color: #d68515 !important;
         }
 
-        /* FOOTER */
         .footer {
             background-color: var(--sanzo-blue) !important;
             color: var(--sanzo-cream) !important;
@@ -135,7 +117,6 @@
             color: var(--sanzo-cream) !important;
         }
 
-        /* SOCIAL ICONS */
         .btn-social {
             border-width: 2px;
             border-color: var(--sanzo-orange) !important;
@@ -183,12 +164,12 @@
     <section class="page-section" id="blog-list">
         <div class="container">
 
-             <div class="card mb-5">
+            <div class="card mb-5">
                 <div class="card-body p-4">
                     <h2 class="card-title text-uppercase">Video Games and Aggression</h2>
-                    <p class="text-muted"><small><i class="far fa-calendar-alt"></i> June 2025 | <i class="fas fa-tag"></i> Academic Research</small></p>
+                    <p class="text-muted"><small><i class="far fa-calendar-alt"></i> May 20, 2024 | <i class="fas fa-tag"></i> Academic Research</small></p>
                     <p class="card-text lead">
-                        A methodological review examining the relationship between video games and aggression. This report discusses the "cause" and "effect" perspectives, evaluating scientific disagreements in light of recent studies like those by Desai et al. (2021) regarding stress relief and gaming.
+                        This report looks that is really video games cause aggression or not. It compares different scientific views to see if games make people aggressive or if there are other reasons. It also includes studies showing how games can help reduce stress.
                     </p>
                     <a href="blog/Game Aggression Report.html" class="btn btn-primary mt-3">Read Full Article &rarr;</a>
                 </div>
@@ -199,21 +180,64 @@
                     <h2 class="card-title text-uppercase">1980 Coup and Turkish Globalization</h2>
                     <p class="text-muted"><small><i class="far fa-calendar-alt"></i> June 2025 | <i class="fas fa-tag"></i> Academic Research</small></p>
                     <p class="card-text lead">
-                        The 1980 military coup in Turkey marked a pivotal moment of political and economic transformation. This report analyzes how authoritarian rule paradoxically paved the way for neoliberal globalization, led by Turgut Özal's reforms, privatization policies, and the rise of the "Anatolian Tigers".
+                        The 1980 military coup changed Turkey's politics and economy. This research explains how the new regime opened Turkey to the global market. It focuses on Turgut Özal's reforms, the switch to an export-based economy, and the rise of new businesses called the "Anatolian Tigers."
                     </p>
                     <a href="blog/1980-coup-globalization.html" class="btn btn-primary mt-3">Read Full Article &rarr;</a>
                 </div>
             </div>
 
+            <div class="card mb-5">
+                <div class="card-body p-4">
+                    <h2 class="card-title text-uppercase">Dead Internet Theory</h2>
+                    <p class="text-muted"><small><i class="far fa-calendar-alt"></i> February 2025 | <i class="fas fa-tag"></i> Academic Research</small></p>
+                    <p class="card-text lead">
+                        Is the internet really full of bots? This research looks at the "Dead Internet Theory," which says most online activity comes from AI, not real people. It explores how bots, algorithms, and fake content are changing the internet and making it harder to trust what we see online.
+                    </p>
+                    <a href="blog/dead-internet-theory.html" class="btn btn-primary mt-3">Read Full Article &rarr;</a>
+                </div>
+            </div>
             
             <div class="card mb-5">
                 <div class="card-body p-4">
                     <h2 class="card-title text-uppercase">The Role of Game Industry in Japan's Public Diplomacy</h2>
                     <p class="text-muted"><small><i class="far fa-calendar-alt"></i> January 2025 | <i class="fas fa-tag"></i> Academic Research</small></p>
                     <p class="card-text lead">
-                        This study examines the role of the Japanese gaming industry in the context of soft power and considers the impact of these products on global diplomacy. It explores how giants like Nintendo and Sony, through franchises like Pokémon and Zelda, have become vital tools in international relations and the "Cool Japan" initiative.
+                        This study looks at how Japan uses video games as "Soft Power" to improve its global image. It analyzes the "Cool Japan" strategy and how games like Pokémon and Mario help Japan connect with the world. It also covers the success of companies like Sony and Nintendo.
                     </p>
                     <a href="blog/Game Industry in Japan.html" class="btn btn-primary mt-3">Read Full Article &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card mb-5">
+                <div class="card-body p-4">
+                    <h2 class="card-title text-uppercase">Spiderman ve Görev Yapısı</h2>
+                    <p class="text-muted"><small><i class="far fa-calendar-alt"></i> June 2024 | <i class="fas fa-tag"></i> Game Content Analysis</small></p>
+                    <p class="card-text lead">
+                        A detailed look at the design of Marvel's Spiderman by Insomniac Games. I analyze the game mechanics, like web-swinging and combat, to see how they keep players engaged. It explains why this game is so successful compared to older ones.
+                    </p>
+                    <a href="blog/spiderman-analizi.html" class="btn btn-primary mt-3">Read Full Article &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card mb-5">
+                <div class="card-body p-4">
+                    <h2 class="card-title text-uppercase">Pokemon Analysis</h2>
+                    <p class="text-muted"><small><i class="far fa-calendar-alt"></i> June 2023 | <i class="fas fa-tag"></i> Market Research</small></p>
+                    <p class="card-text lead">
+                        A comprehensive analysis of Pokemon Sword & Shield and Pokemon Go. This case study covers the marketing strategies, target audience demographics, monetization models, and the sales performance of these titles, including the controversial #Dexit movement.
+                    </p>
+                    <a href="blog/pokemon-presentation.html" class="btn btn-primary mt-3">Read Full Article &rarr;</a>
+                </div>
+            </div>
+            
+            <div class="card mb-5">
+                <div class="card-body p-4">
+                    <h2 class="card-title text-uppercase">Persona 3 ve İçerik Analizi</h2>
+                    <p class="text-muted"><small><i class="far fa-calendar-alt"></i> April 2023 | <i class="fas fa-tag"></i> Game Content Analysis</small></p>
+                    <p class="card-text lead">
+                        Shin Megami Tensei evreninin kült yapımı Persona 3 üzerine detaylı bir inceleme. Oyunun J-RPG ve Sosyal Simülasyon türlerini nasıl harmanladığını, "Dark Hour" mekaniğini ve "Ölüm" teması etrafında şekillenen hikaye anlatımını analiz ediyorum.
+                    </p>
+                    <a href="blog/persona-3-analizi.html" class="btn btn-primary mt-3">Read Full Article &rarr;</a>
                 </div>
             </div>
         </div>
@@ -222,27 +246,13 @@
     <footer class="footer text-center">
         <div class="container">
             <div class="row justify-content-center">
-                
                 <div class="col-lg-12 mb-5 mb-lg-0">
                     <h4 class="text-uppercase mb-4">Connect with Me</h4>
-                    
-                    <a class="btn btn-outline-light btn-social mx-1" href="https://x.com/_pholsen" target="_blank">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    
-                    <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/kadircemyilmaz/" target="_blank">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    
-                    <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/pholsen" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-
-                    <a class="btn btn-outline-light btn-social mx-1" href="https://pholsen.itch.io/" target="_blank">
-                        <i class="fab fa-itch-io"></i>
-                    </a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://x.com/_pholsen" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/kadircemyilmaz/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/pholsen" target="_blank"><i class="fab fa-github"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://pholsen.itch.io/" target="_blank"><i class="fab fa-itch-io"></i></a>
                 </div>
-
             </div>
         </div>
     </footer>

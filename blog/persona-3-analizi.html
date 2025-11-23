@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Persona 3 ve İçerik Analizi" />
+    <meta name="author" content="Kadir Cem Yılmaz" />
+    <title>Persona 3 Analizi - Kadir Cem Yılmaz</title>
+    
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+    
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,600;0,700;1,700&family=Rubik:wght@300;400;500;700&display=swap&subset=latin-ext" rel="stylesheet">
+    
+    <link href="../css/styles.css" rel="stylesheet" />
+    
+    <style>
+        /* --- SANZO WADA COLOR PALETTE --- */
+        :root {
+            --sanzo-blue: #064f6e;
+            --sanzo-orange: #f99d1b;
+            --sanzo-cream: #f5ecc2;
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3, h4, h5, h6, .navbar-brand, .masthead-heading, .card-title, caption, th {
+            font-family: 'Kanit', sans-serif !important;
+            font-weight: 700; 
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: var(--sanzo-blue) !important;
+        }
+        
+        body, p, .lead, .nav-link, .btn, .footer, .copyright, .text-muted, li, small, .report-text, td {
+            font-family: 'Rubik', sans-serif !important;
+        }
+
+        /* GENERAL STYLES */
+        body { background-color: var(--sanzo-cream) !important; color: var(--sanzo-blue) !important; }
+        
+        /* NAVBAR */
+        #mainNav { background-color: var(--sanzo-blue) !important; padding-top: 1rem; padding-bottom: 1rem; }
+        #mainNav .navbar-brand { color: var(--sanzo-cream) !important; }
+        #mainNav .nav-link { color: var(--sanzo-cream) !important; font-weight: 500; }
+        #mainNav .nav-link.active, #mainNav .nav-link:hover { color: var(--sanzo-orange) !important; }
+
+        /* HEADER */
+        header.masthead { background-color: var(--sanzo-blue) !important; padding-top: 11rem !important; padding-bottom: 6rem !important; color: var(--sanzo-cream) !important; }
+        .masthead-heading, .masthead-subheading, .text-white, .mt-2 { color: var(--sanzo-cream) !important; }
+        .divider-light .divider-custom-line { background-color: var(--sanzo-cream) !important; }
+        .divider-light .divider-custom-icon { color: var(--sanzo-orange) !important; }
+
+        /* CONTENT */
+        .report-text { font-size: 1.1rem; line-height: 1.8; text-align: justify; }
+        hr { border-top-color: var(--sanzo-blue) !important; opacity: 0.2; }
+
+        /* TABLE STYLE */
+        .table-custom {
+            background-color: #fff;
+            border: 2px solid var(--sanzo-blue);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 3rem;
+            margin-top: 2rem;
+            box-shadow: 5px 5px 0px rgba(6, 79, 110, 0.1);
+        }
+        .table-custom th {
+            background-color: var(--sanzo-blue);
+            color: var(--sanzo-cream) !important; /* Başlık rengi düzeltildi */
+            border: none;
+            padding: 1rem;
+            text-transform: uppercase;
+            font-family: 'Kanit', sans-serif;
+        }
+        .table-custom td {
+            padding: 1rem;
+            border-bottom: 1px solid #dee2e6;
+            color: var(--sanzo-blue);
+        }
+
+        /* BUTTONS */
+        .btn { transition: all 0.3s ease-in-out !important; font-weight: 500; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .btn-outline-dark { color: var(--sanzo-blue) !important; border-color: var(--sanzo-blue) !important; }
+        .btn-outline-dark:hover { background-color: var(--sanzo-blue) !important; color: var(--sanzo-cream) !important; }
+        
+        /* FOOTER */
+        .footer { background-color: var(--sanzo-blue) !important; color: var(--sanzo-cream) !important; }
+        .copyright { background-color: #04384f !important; color: var(--sanzo-cream) !important; }
+    </style>
+</head>
+<body id="page-top">
+
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Kadır Cem Yılmaz</a>
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../index.html#portfolio">Portfolıo</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../blog.html">Back to Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="masthead bg-primary text-white text-center">
+        <div class="container d-flex align-items-center flex-column">
+            <h1 class="masthead-heading text-uppercase mb-0">Persona 3 ve İçerik Analizi</h1>
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <p class="masthead-subheading font-weight-light mb-0">Oyun Tasarımı ve Hikaye İncelemesi</p>
+            <p class="mt-2 fst-italic">Kadir Cem Yılmaz | Dijital Oyun Tasarımı</p>
+        </div>
+    </header>
+
+    <section class="page-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 report-text">
+
+                    <h3 class="mb-4">Tanıtım</h3>
+                    <p>Persona 3, Shin Megami Tensei evreninde geçen persona serisinin 3. oyunudur. Oyun Japonya'da çıkışını 2006 yılında yapmıştır. Bu oyuna göz atmadan önce Shin Megami Tensei oyunları ile Persona oyunları arasındaki farktan bahsetmek istiyorum (Atlus, 2006).</p>
+                    <p>İlk olarak 1987 çıkışını yapan Megami Tensei ile hayat buluyor seri. Shin Megami Tensei oyunları Digimon ve Pokemon oyun tarzının liseli gençler ve karanlık bir temaya yedirilmesi şeklinde devam ediyor. Fakat 1996'da çıkış yapan ve spin-off olarak hayatına başlayan ilk Persona oyunu bu oynanış mekaniğini alıp NPC'lerle daha fazla diyaloğun bulunduğu, arkadaşlık ilişkilerinin önemli olduğu bir social simulation genre'sına evriliyor.</p>
+                    <p>Shin Megami Tensei'de bulunan J-RPG Pokemon mekaniklerine daha esprili bir social simulation ekleniyor ve bu formül daha çok beğeniliyor. Persona 3 ise ilk iki oyundan farklı olarak serinin geri kalanına hem müzikleri hem de atmosferi ile estetik bir yön çiziyor.</p>
+
+                    <hr class="my-5">
+
+                    <h3 class="mb-4">Hikaye ve Oynanış</h3>
+                    <p>Her persona oyunu travmatik bir konuyu ele alır. Persona 1 "Gücü Aramak", Persona 2 "Cezalar ve Günahlar" ve Persona 3 ise "Ölüm" teması üzerine yoğunlaşır. Bunu daha ilk sahneden seyirciye vermenin ikonik bir yolunu bulur ve elinde silah tutan ve kendine sıkmaya çalışan bir kız ile başlar oyun.</p>
+                    <p>Persona evreninde günler 24 saat değildir. 24 saatin sonunda yeni bir zaman dilimi açılır. İsmi "Dark Hour" olan bu zaman diliminde dünyada herkesin göremediği yaratıklar kol gezmeye başlar. Bu yaratıkları görebilenler sadece Persona kullanıcılarıdır. Bu yaratıkların amacı dünyaya kıyameti getirmektir. Bu durumu fark eden Persona kullanıcıları da geceleri "Dark Hour" da dışarı çıkıp yaratıkları avlıyorlar.</p>
+                    <p>Ana karakterimiz ailesini kaybettikten sonra yeni bir şehre, okula ve yetimhaneye yerleşir. Fakat bu yetimhanede herkes persona kullanıcısıdır. Bu durumu yetimhanedekiler açıkladıktan sonra macera başlar. Amacımız "Tartarus" isimli yaratık kulesinin sonuna ulaşıp kıyameti önlemektir. Bu süre zarfında da okul hayatımızı, sınavlarımızı ve arkadaşlık ilişkilerimizi idame ettirmeliyiz.</p>
+                    <p>Oyunda Persona olarak adlandırılan ve yaratıklarla savaşmaya yarayan kendi kişilik-yaratıklarımız bulunmaktadır. Bu Personaları okulda arkadaşlık ilişkilerimizi geliştirerek güçlendiriyoruz. Oyunun 2 safhası bulunmakta. Gün içerisinde Sabah, Öğlen ve Akşam olacak şekilde NPC'ler ile konuşup etrafı gezebildiğimiz gün içi kısmı var. Daha sonrasında yatmak yerine Tartarus'a gitmeyi tercih edersek oyunun sıra tabanlı savaş kısmı olan "Dark Hour" kısmı var. Kuleye gittiğimiz zaman amacımız katları birer birer temizleyip en tepesine varmaktır.</p>
+
+                    <hr class="my-5">
+
+                    <h3 class="mb-4">Karakterler</h3>
+                    <p>Ana karakterimiz sessiz, sakin kendi içine kapanık ve zeki bir karakterdir. Hikayedeki tüm yan karakterlerle ilişki geliştirdikçe herkes hayranlık duymaya veya aşık olmaya başlar. Oyunun en güçlü yanı birbirinden farklı karakterlerle dilediğimiz kadar ilişki geliştirebilmemiz ve daha ilerisinde romance yapabilmemiz.</p>
+                    <p>Her yan karaktere oyunun içerisinde bulunan persona tiplerinden biri verilmiş. Örneğin oyunun başında karşılaştığımız, başlarda birbirimize karşı soğuk yaptığımız ama daha sonrasında aramızdaki buzları eritip biribirimize özelimizi paylaşıp aşık olduğumuz Yukari isimli karaktere "Lovers" arcanası verilmiş. Veya hem okulun başkanı hem de kaldığımız yetimhanedeki öğrencilere liderlik eden, çok zengin bir aileden gelen, yaratıklarla verilen mücadelede liderlik eden Mitsuri isimli karaktere "Empress" arcanası verilmiş. Bunun gibi toplam 20 tane arcana ve hepsini temsil eden bir yan karakter bulunmakta.</p>
+
+                    <hr class="my-5">
+
+                    <h3 class="mb-4">Zorluk ve Denge</h3>
+                    <p>Oyun bir J-RPG. Oyunda sıra tabanlı bir savaş sistemi mevcut. Maksimum 4 kişiden oluşan bir ekiple yaratıkların üstesinden geliyoruz. Oyun gün gün ilerliyor ve günler ilerledikçe oyun daha da zorlanıyor. Bu yüzden olabildiğince hem kendinizi savaş istatistiklerinden geliştirmeli hem de sosyal hayatınızı geliştirmelisiniz.</p>
+                    <p>Bir yandan da sınavlarınıza çalışmalı okul hayatının gerekliliklerini yerine getirmelisiniz. Oyunda başlarda en çok zorlanılan konu bu dengeyi iyi ayarlamak. Oyunda her karakterle aynı gün içerisinde konuşamıyorsunuz. Her karaktere 1 zaman dilimi ayırabiliyorsunuz. Ve her karakter her gün konuşulabilir olmuyor. Örneğin yüzme kulübüne giriyorsunuz ama yüzme kulübü çarşamba ve perşembe günleri açık oluyor.</p>
+                    <p>Oyunda en çok uğraştıran şey ise tam olarak bu çünkü geliştirmeniz gereken 20 Arcana var fakat zamanınız o kadar da çok değil. Ve üstüne sınav zamanı geldiğinde arkadaşlarınızla vakit geçiremiyorsunuz. Bu dengeyi iyi oturtmak gerekiyor.</p>
+                    <p>Bununla beraber oyunun sonuna yaklaştıkça gerekli sosyal statları tamamlıyorsunuz. Fakat bundan sonra da elinizdeki pokemon niyetine kullandığınız personalarınız güçsüz kalmaya başlıyor ve bu sefer de personalarınızı geliştirmeye başlıyorsunuz. Oyun bunun dengesini çok iyi oturtmuş, sıkılmadan saatlerce Personalarımı geliştirmeye ve düzgün kombinasyonlar yapıp yenilerini elde etmeye çalıştım.</p>
+
+                    <div class="table-responsive table-custom">
+                        <table class="table table-hover mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Kategori</th>
+                                    <th>İçerik ve Mekanikler</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="fw-bold">Ustalaşma</td>
+                                    <td>Sıra tabanlı savaşlar, Stratejik düşünme, Zaman yönetimi, Derslerde öğrendiklerini unutmama</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Sosyal Gruplaşma</td>
+                                    <td>Arkadaşlık ilişkileri, Onlara hediye almak, Arkadaşlarına savaşlara katılmak, Ekip ruhu, Aynı yetimhanede kalan çocuklar, Okul hayatı, Öğretmenlerle olan ilişkiler.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="text-center mt-5 mb-5">
+                        <a href="../blog.html" class="btn btn-xl btn-outline-dark">
+                            <i class="fas fa-arrow-left me-2"></i> Blog Listesine Dön
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer text-center">
+        <div class="container">
+            <small class="text-white">Copyright &copy; Kadir Cem Yılmaz 2025</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
