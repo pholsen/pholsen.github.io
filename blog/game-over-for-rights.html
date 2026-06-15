@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Game Over for Rights: Unfair Work Culture in Turkish Indie Games" />
+    <meta name="author" content="Kadir Cem Yilmaz" />
+    <title>Game Over for Rights - Kadir Cem Yilmaz</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,600;0,700;1,700&family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet" />
+    <style>
+        :root { --sanzo-blue: #064f6e; --sanzo-orange: #f99d1b; --sanzo-cream: #f5ecc2; }
+        body { background-color: var(--sanzo-cream) !important; color: var(--sanzo-blue) !important; font-family: 'Rubik', sans-serif !important; }
+        h1, h2, h3, h4, h5, h6, .navbar-brand, .masthead-heading, .card-title { font-family: 'Kanit', sans-serif !important; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--sanzo-blue) !important; }
+        #mainNav { background-color: var(--sanzo-blue) !important; padding-top: 1rem; padding-bottom: 1rem; }
+        #mainNav .navbar-brand { color: var(--sanzo-cream) !important; }
+        #mainNav .nav-link { color: var(--sanzo-cream) !important; font-weight: 500; }
+        #mainNav .nav-link:hover { color: var(--sanzo-orange) !important; }
+        header.masthead { background-color: var(--sanzo-blue) !important; padding-top: 11rem !important; padding-bottom: 6rem !important; }
+        .masthead-heading, .masthead-subheading, .text-white { color: var(--sanzo-cream) !important; }
+        .divider-light .divider-custom-line { background-color: var(--sanzo-cream) !important; }
+        .divider-light .divider-custom-icon { color: var(--sanzo-orange) !important; }
+        .footer { background-color: var(--sanzo-blue) !important; color: var(--sanzo-cream) !important; }
+        .copyright { background-color: #04384f !important; color: var(--sanzo-cream) !important; }
+        .btn-outline-dark { color: var(--sanzo-blue) !important; border-color: var(--sanzo-blue) !important; }
+        .btn-outline-dark:hover { background-color: var(--sanzo-blue) !important; color: var(--sanzo-cream) !important; }
+        
+        .report-text { font-size: 1.15rem; line-height: 1.8; text-align: justify; }
+        .report-text p { margin-bottom: 1.5rem; }
+        .report-text h3 { margin-top: 3rem; margin-bottom: 1.5rem; }
+        a { color: var(--sanzo-orange); text-decoration: none; font-weight: 500; }
+        a:hover { color: var(--sanzo-blue); text-decoration: underline; }
+        
+        /* Screenshot Styles */
+        .screenshot-container { margin: 2rem 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.5; color: #E8E8E8; text-align: left; }
+        .screenshot-title { font-family: 'Rubik', sans-serif; font-weight: 600; margin-bottom: 0.5rem; color: var(--sanzo-blue); font-size: 1.15rem; }
+        
+        /* LinkedIn Post */
+        .li-post { background-color: #1b1f23; border: 1px solid #3d4349; border-radius: 8px; padding: 16px; margin-bottom: 1rem; }
+        .li-header { display: flex; align-items: center; margin-bottom: 12px; }
+        .li-avatar { width: 48px; height: 48px; border-radius: 50%; background-color: #38434f; margin-right: 12px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white; }
+        .li-author-info { flex-grow: 1; }
+        .li-name { font-weight: 600; color: #fff; font-size: 16px; margin: 0; }
+        .li-title { color: #a0aab2; font-size: 14px; margin: 2px 0 0 0; line-height: 1.3; }
+        .li-time { color: #a0aab2; font-size: 12px; margin: 2px 0 0 0; }
+        .li-content { color: #e9e9e9; white-space: pre-wrap; font-size: 15px; }
+
+        /* Steam Banner */
+        .steam-banner { background-color: #1b2838; border-radius: 4px; overflow: hidden; margin-bottom: 1rem; box-shadow: 0 4px 8px rgba(0,0,0,0.3); border: 1px solid #2a475e; }
+        .steam-img-placeholder { background: linear-gradient(135deg, #1b2838 0%, #2a475e 100%); height: 180px; position: relative; display: flex; align-items: center; justify-content: center; border-bottom: 2px solid #66c0f4; }
+        .steam-title { font-family: 'Arial Black', sans-serif; font-size: 36px; color: #ffffff; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); letter-spacing: 2px; }
+        .steam-info { padding: 16px; color: #c6d4df; font-size: 13px; }
+        .steam-desc { margin-bottom: 12px; font-size: 14px; color: #e5e4e4; }
+        .steam-row { display: flex; margin-bottom: 4px; }
+        .steam-label { width: 120px; color: #556772; font-weight: bold; text-transform: uppercase; font-size: 11px; }
+        .steam-value { color: #8f98a0; }
+        .steam-mixed { color: #b9a074; }
+
+        /* WhatsApp/Message */
+        .msg-container { background-color: #0b141a; border-radius: 8px; padding: 16px; margin-bottom: 1rem; max-width: 600px; border: 1px solid #202c33; }
+        .msg-bubble { background-color: #202c33; border-radius: 8px; padding: 8px 12px; margin-bottom: 8px; position: relative; color: #e9edef; font-size: 15px; }
+        .msg-time { font-size: 11px; color: #8696a0; text-align: right; margin-top: 4px; display: block; }
+        .msg-reaction { background-color: #182229; border: 1px solid #2a3942; border-radius: 12px; padding: 2px 6px; font-size: 12px; position: absolute; bottom: -10px; right: 20px; }
+        .msg-author { color: #53bdeb; font-size: 13px; font-weight: 500; margin-bottom: 4px; display: block; }
+        .msg-reply { border-left: 3px solid #00a884; background-color: #182229; padding: 4px 8px; margin-bottom: 6px; border-radius: 4px; font-size: 13px; color: #e9edef;}
+
+        sup { font-size: 0.75em; vertical-align: super; line-height: 0; }
+    </style>
+</head>
+<body id="page-top">
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Kadir Cem Yilmaz</a>
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../index.html#portfolio">Portfolio</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../blog.html">Back to Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead bg-primary text-white text-center">
+        <div class="container d-flex align-items-center flex-column">
+            <h1 class="masthead-heading text-uppercase mb-0">Game Over for Rights</h1>
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <p class="masthead-subheading font-weight-light mb-0">Unfair Work Culture in Turkish Indie Games</p>
+            <p class="mt-2 fst-italic">Student Name: Kadir Cem Yılmaz<br>Student ID: 65704<br>University: VIZJA University, Warsaw<br>Department: New Media and Public Relations<br>Course: Investigative Journalism<br>Date: 14.06.2026</p>
+        </div>
+    </header>
+    <section class="page-section report-text">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-8">
+                    
+                    <p>Working at a game studio usually sounds cool. But once you get into it, the reality is often quite different. From the biggest game studios to the most indie ones, everyone has complaints about the work environment. The insufficient legal protections make this situation far from ideal for the Turkish gaming industry as well. In particular, a post published on LinkedIn by an employee who was fired in recent months clearly lays out the problems: crunch culture, violations of labor rights, unsafe working conditions, and many other issues. This study will highlight the problems experienced by Akın and his colleagues and try to address them from a wide perspective.</p>
+                    
+                    <p>The final stages of game development are characterized by high pressure and long working hours across the industry. This concept, called “crunch” in the literature, means periods of extreme overtime, usually without pay, used to speed up delayed projects.<sup>1</sup> Even after all the serious physical and mental damage it causes to employees, crunch remains a normalized practice in the video game industry. <sup>2</sup>Developers' professional loyalty to projects and their love for games have become an integral part of the industry, leading to their abuse by managers and setting the stage for “passion exploitation.”<sup>3</sup> While the “crunch” may be one of the most visible crises in the industry, the intentional abuse of legal processes and the devaluation of labor are just as problematic for game workers as crunch. This report analyzes business ethics violations and the impact of crunch on employee rights in Turkey’s independent (indie) game market, using the Hamlet Games case as a case study. The crunch issues and legal violations involved in this case will be examined from the perspectives of those directly affected and legal experts.</p>
+
+                    <h3 class="mb-3">Hamlet Games Case:</h3>
+                    
+                    <div class="screenshot-title">Screenshot 1</div>
+                    <div class="screenshot-container">
+                        <img src="../assets/img/screenshot1.png" alt="Screenshot 1" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    </div>
+
+                    <p>Hamlet Games is an independent game studio that has been developing computer games for the past three years. As confirmed in Screenshot 1, the 12-person development team at Hamlet Games was suddenly terminated by investors as of May 2026. According to Screenshot 1, Two months before the launch, the team was motivated by management’s promise that “Work hard, including on weekends, and you will be fully rewarded for your efforts”; they were made to work without breaks and even had their weekend time off taken away. Then of all, the team has completed the project's development process, and the game has been released.</p>
+
+                    <div class="screenshot-title">Screenshot 2</div>
+                    <div class="screenshot-container text-center">
+                        <img src="../assets/img/screenshot2_1.png" alt="Emberbane Banner" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                        <img src="../assets/img/screenshot2_2.png" alt="Akin Aydin Post 2" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    </div>
+
+                    <p>As indicated in Screenshot 2, for the two months following the game’s release, the team continued to work at the company and put in long hours. To understand the working conditions, Akın was specifically asked if the team had been subjected to systematic mobbing, psychological harassment or unlawful payment practices (such as working without insurance or receiving cash-in-hand payments) during the game’s active development phase. As Akın noted in Screenshot 2, no issues related to insurance or payments were encountered during the production phase, and he did not observe any mobbing before the game’s release. However, Screenshot 2 reveals that at the end of those two months, company management and investors suddenly announced that they had gone bankrupt (without any legally finalized official proceedings) and stated that they were shutting down operations. At the heart of this strategy lies a strategy to avoid the financial obligations associated with workers' rights; after all, when employees are officially fired by the company, they are entitled to legal compensation payments. Some employees, such as Akın Aydın, were forced to accept these imposed conditions and give up their legal rights to compensation, leaving them with no choice but to quit. Other employees who rejected this offer, refused to quit, and fully claimed their legal rights by filing a lawsuit have been left in legal limbo because their official exit papers have not been issued.</p>
+
+                    <h3 class="mb-3">Legal Limbo</h3>
+                    <p>One of the worst aspects of the Hamlet Games case is the legal limbo<sup>4</sup> in which employees who refuse to quit are trapped. Investors who refuse to issue official termination papers to employees who have filed lawsuits are employing a tactic of deliberate harassment. To understand the legal aspects of this strategy and the legal framework in Turkey, the expert opinion of a labor law attorney was requested as part of this study.</p>
+
+                    <div class="screenshot-title">Screenshot 3</div>
+                    <div class="screenshot-container">
+                        <div class="msg-container">
+                            <div class="msg-bubble">
+                                According to what has been said and written, they will of course receive what they are entitled to in the end. However, if the case was filed in Türkiye, and the entire local court process takes approximately two years, plus the appeals process which also takes about two years, then in total, it could take four years to regain all their rights.
+                            </div>
+                            <div class="msg-bubble" style="margin-bottom: 16px;">
+                                Assuming the company declares bankruptcy, the company's assets will be sold, and payments will be made to individuals and companies who claimed to have outstanding debts from the company until the bankruptcy proceedings. However, since employee claims take priority, the unpaid wages and severance pay of the employees will be paid first.
+                                <span class="msg-time">12:11</span>
+                                <div class="msg-reaction">🙏</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>As noted in Screenshot 3, while employees will receive what they are deserved at the end of the day, recovering those funds is a challenging process: “If the case is filed in Turkey and the entire local court process takes about two years, and when you add the appeals process—which also takes about two years—recovering all their funds could take a total of four years. Investors are effectively turning this four-year timeline into a weapon, financially starving developers and forcing them to give up.</p>
+
+                    <p>According to Screenshot 3, in a real and formal bankruptcy proceeding, the company’s assets are sold to pay off its debts; however, “since employee claims take priority, employees’ unpaid wages and damages will be paid first.” Because a formal declaration of bankruptcy would force investors to prioritize employee payments, investors are using the threat of bankruptcy not to legally trigger the bankruptcy process, but only as a pressure tactic to force developers to quit and surrender their legal rights.</p>
+
+                    <h3 class="mb-3">Personal Experience</h3>
+                    <p>From the moment a developer enters the Turkish gaming industry, they are subjected to systematic undermining of their labor. As a game developer, based on my own observations and experiences, I can say that for many companies in Turkey, employee satisfaction or sustainable project management is rarely a priority. Instead, the primary goal is to minimize labor costs as much as possible and to squeeze employees financially in order to extract the maximum sacrifice from them. This exploitative system often targets newcomers to the industry. It is a common practice to make entry-level developers work under the cover of “internships” or “volunteer work” without paying them a single money.<sup>5</sup> Employers are trapping workers in their systems by purposely dragging out these free or extremely low-cost processes as long as possible in order to avoid financial obligations. In my own career, I experienced this situation personally while working at a firm in Istanbul. I was hired on a volunteer basis at first, and after that period, I worked for a monthly salary of around 100 euros. This situation reflects a common form of exploitation from an employer’s perspective, where the aim is to trap the employee in a cycle of low-wage labor.</p>
+
+                    <h3 class="mb-3">Conclusion</h3>
+                    <p>The Hamlet Games case is a stark reflection of the “exploitation of passion” and the unregulated, unfair work culture within Turkey’s independent gaming industry. From unpaid internships to systematic “crunch” periods and silent bullying, industry practices heavily disadvantage employees. This cycle of exploitation will continue until developers fully realize their legal rights and build stronger unity across the industry.</p>
+
+                    <h3 class="mb-3">Special Thanks</h3>
+                    <p>I would like to thank my colleague Akın Aydın, who contributed to this study by speaking openly about the challenges he has faced, as well as lawyer Umut Yaşar Özkan for his valuable insights into the legal aspects of this topic during the preparation of this study.</p>
+
+                    <h3 class="mb-3">Bibliography</h3>
+                    <ul class="list-unstyled" style="font-size: 0.9rem;">
+                        <li class="mb-3"><sup>1</sup> Anderson, Sky LaRell ve Stephanie Orme. "Mental Health, Illness, Crunch, and Burnout: Discourses in Video Games Culture." <em>Proceedings of the 55th Hawaii International Conference on System Sciences</em>, 2022, 3133-3140. <a href="https://hdl.handle.net/10125/79719" target="_blank" style="word-break: break-all;">https://hdl.handle.net/10125/79719</a>.</li>
+                        <li class="mb-3">Aydın, Akın. "Bugün itibarıyla Hamlet Games'deki görevlerimize yatırımcılar tarafından son verildiğini ve bu süreçte ciddi hak ihlallerine uğradığımızı paylaşmak isterim..." <em>LinkedIn</em>, 2026, <a href="https://www.linkedin.com/posts/ak%C4%B1n-ayd%C4%B1n-239ba0202_iflas-game-oyun-activity-7454914002633072642-UrS2" target="_blank" style="word-break: break-all;">www.linkedin.com/posts/akın-aydın-239ba0202_iflas-game-oyun-activity-7454914002633072642-UrS2</a>. Erişim tarihi: 14 Haziran 2026.</li>
+                        <li class="mb-3"><sup>2</sup> Cote, Amanda C. ve Brandon C. Harris. "'Weekends became something other people did': Understanding and intervening in the habitus of video game crunch." <em>Convergence: The International Journal of Research into New Media Technologies</em>, 2020, ss. 1-16. <a href="https://doi.org/10.1177/1354856520913865" target="_blank" style="word-break: break-all;">https://doi.org/10.1177/1354856520913865</a>.</li>
+                        <li class="mb-3"><sup>4</sup> "Legal limbo." <em>Collins English Dictionary</em>, HarperCollins Publishers, <a href="https://www.collinsdictionary.com/dictionary/english/legal-limbo" target="_blank" style="word-break: break-all;">www.collinsdictionary.com/dictionary/english/legal-limbo</a>. Erişim tarihi: 14 Haziran 2026.</li>
+                        <li class="mb-3"><sup>5</sup> Sezgin, Serra. <em>Dijital Oyun Ekosistemi: Yaratıcı Endüstri ve Emek</em>. Alternatif Bilişim, 2020.</li>
+                    </ul>
+
+                </div>
+            </div>
+            
+            <div class="text-center mt-5 mb-5"><a href="../blog.html" class="btn btn-xl btn-outline-dark"><i class="fas fa-arrow-left me-2"></i> Back to Blog List</a></div>
+        </div>
+    </section>
+    <footer class="footer text-center"><div class="container"><small>Copyright &copy; Kadir Cem Yilmaz 2026</small></div></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
